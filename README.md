@@ -48,7 +48,7 @@ To use this method, you will need to edit the contents of "aroma-updater-script"
 
 You will need to edit the "aroma-config" file to suit your needs < DO NOT RENAME THIS FILE!!!
 
-and add your logo.ong of choice to the aroma directory
+and add your logo.png of choice to the aroma directory
 
 You will need to store any tools that you want to use in the tools directory
 
