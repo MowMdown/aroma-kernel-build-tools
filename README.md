@@ -56,4 +56,5 @@ mkbootimg
 unpackbootimg
 and your init.d scripts
 
-You will need to edit the aroma-config file to suit your needs
+You will need to edit the aroma-config file to suit your needs and 
+add your logo.ong of choice to the aroma directory
