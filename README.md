@@ -1,6 +1,8 @@
 android-kernel-build-tools
 ==========================
 
+NOW WITH AROMA <---- Go to bottom of README.md to see how to use this!
+
 To build your kernel you need to have a file in the top level
 directory that contains the following configuration variables
 (with the defaults that I use to build my dna kernel as an
@@ -40,3 +42,15 @@ In the LOCAL_BUILD_DIR you must have the following files:
 
 initrd.img
 bootimg.cfg
+
+Using Aroma
+===========
+You will need to create a Directory inside the LOCAL_BUILD_DIR called tools
+
+This is where you can place modules that you want your aroma-config to use such as:
+
+busybox
+dd
+abootimg
+mkbootimg
+unpackbootimg
