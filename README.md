@@ -44,7 +44,7 @@ Using Aroma-kernel-build-tools
 ==============================
 Use the aromakernelbuild.sh script to build with the aroma installer
 
-To use this method, you will need to edit the contents of aromakernel-updater-script < DO NOT RENAME THIS FILE!!!
+To use this method, you will need to edit the contents of aroma-updater-script < DO NOT RENAME THIS FILE!!!
 
 You will need to store any tools that you want to use in the tools directory
 
