@@ -1,9 +1,5 @@
-aroma-kernel-build-tools
-==========================
-
-NOW WITH AROMA <---- Go to bottom of README.md to see how to use this!
-
-This is currently set up to use with my Monarudo_GPU_M7 kernel!!!
+Setup kerneltools-build-config
+=============================
 
 To build your kernel you need to have a file in the top level
 directory that contains the following configuration variables
@@ -26,8 +22,7 @@ FLASH_BOOT='write_raw_image("/tmp/boot.img", "boot")'
 
 N_CORES=4
 
-VERSION=
-
+VERSION=**YOUR_KERNEL_VERSION_HERE**
 
 The file is named "kerneltools-build-config"
 
@@ -45,8 +40,12 @@ In the LOCAL_BUILD_DIR you must have the following files:
 initrd.img
 bootimg.cfg
 
-Using Aroma
-===========
+Using Aroma-kernel-build-tools
+==============================
+Use the aromakernelbuild.sh script to build with the aroma installer
+
+To use this method, you will need to edit the contents of aromakernel-updater-script < DO NOT RENAME THIS FILE!!!
+
 You will need to store any tools that you want to use in the tools directory
 
 This is where you can place tools that you want your aroma-config to use such as:
@@ -60,3 +59,11 @@ and your init.d scripts
 
 You will need to edit the aroma-config file to suit your needs and 
 add your logo.ong of choice to the aroma directory
+
+Using Anykernel-build-tools
+===========================
+Use the anykernelbuild.sh
+
+This will build a standard kernel with a non-aroma installer zip, just flash and go!
+
+To use this method, you will need to edit the contents of anykernel-updater-script < DO NOT RENAME THIS FILE!!!
