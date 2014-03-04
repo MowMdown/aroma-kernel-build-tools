@@ -11,7 +11,7 @@ import commands
 
 def devicespec():
   cross_compile   = raw_input('\nCROSS_COMPILE=~/')
-  local_build_dir = raw_input('LOCAL_BUILD_DIR=~/')
+  local_build_dir = raw_input('LOCAL_BUILD_DIR=')
   target_dir      = raw_input('TARGET_DIR=~/')
   partition       = raw_input('SYSTEM_PARTITION=/dev/block/mmcblk0p')
   defconfig       = raw_input('DEFCONFIG=')
@@ -23,7 +23,7 @@ def devicespec():
   print '\n=====================================\n'
   print 'CROSS_COMPILE=~/' + cross_compile
   print 'HOST_CC=gcc'
-  print 'LOCAL_BUILD_DIR=~/' + local_build_dir 
+  print 'LOCAL_BUILD_DIR=' + local_build_dir 
   print 'TARGET_DIR=~/' + target_dir
   print 'SYSTEM_PARTITION=\"/dev/block/mmcblk0p' + partition + '\"'
   print 'DEFCONFIG=' + defconfig
@@ -52,7 +52,7 @@ def devicespec():
     outfile = open(new_file, 'w')
     outfile.write('CROSS_COMPILE=~/' + cross_compile +
                   '\nHOST_CC=gcc' +
-                  '\nLOCAL_BUILD_DIR=~/' + local_build_dir +
+                  '\nLOCAL_BUILD_DIR=' + local_build_dir +
                   '\nTARGET_DIR=~/' + target_dir +
                   '\nSYSTEM_PARTITION=\"/dev/block/mmcblk0p' + partition + '\"' +
                   '\nDEFCONFIG=' + defconfig +

@@ -103,7 +103,17 @@ mkdir -p $UPDATE_ROOT/META-INF/com/google/android
 cp $TOOLS_DIR/update-binary-installer $UPDATE_ROOT/META-INF/com/google/android
 cp -r $TOOLS_DIR/aroma $UPDATE_ROOT/META-INF/com/google/android
 cp $TOOLS_DIR/aroma-config $UPDATE_ROOT/META-INF/com/google/android
+<<<<<<< HEAD
 cp -r $TOOLS_DIR/tools $UPDATE_ROOT/
+=======
+
+if [ -e $LOCAL_BUILD_DIR/tools ]
+then
+    mkdir -p $LOCAL_BUILD_DIR
+    cp -r $LOCAL_BUILD_DIR/tools $UPDATE_ROOT/tools
+if
+
+>>>>>>> c0c71c3f6177e88024c68d02a6397e9372caba3f
 cp $TOOLS_DIR/update-binary $UPDATE_ROOT/META-INF/com/google/android
 (
     cat <<EOF
