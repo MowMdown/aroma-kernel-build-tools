@@ -1,4 +1,4 @@
-android-kernel-build-tools
+aroma-kernel-build-tools
 ==========================
 
 NOW WITH AROMA <---- Go to bottom of README.md to see how to use this!
