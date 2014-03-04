@@ -3,6 +3,8 @@ aroma-kernel-build-tools
 
 NOW WITH AROMA <---- Go to bottom of README.md to see how to use this!
 
+This is currently set up to use with my Monarudo_GPU_M7 kernel!!!
+
 To build your kernel you need to have a file in the top level
 directory that contains the following configuration variables
 (with the defaults that I use to build my dna kernel as an
