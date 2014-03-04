@@ -45,12 +45,13 @@ bootimg.cfg
 
 Using Aroma
 ===========
-You will need to create a Directory inside the LOCAL_BUILD_DIR called tools
+You will need to store any tools that you want to use in the tools directory
 
-This is where you can place modules that you want your aroma-config to use such as:
+This is where you can place tools that you want your aroma-config to use such as:
 
 busybox
 dd
 abootimg
 mkbootimg
 unpackbootimg
+and your init.d scripts
