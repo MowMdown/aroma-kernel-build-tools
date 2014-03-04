@@ -44,7 +44,11 @@ Using Aroma-kernel-build-tools
 ==============================
 Use the aromakernelbuild.sh script to build with the aroma installer
 
-To use this method, you will need to edit the contents of aroma-updater-script < DO NOT RENAME THIS FILE!!!
+To use this method, you will need to edit the contents of "aroma-updater-script" < DO NOT RENAME THIS FILE!!!
+
+You will need to edit the "aroma-config" file to suit your needs < DO NOT RENAME THIS FILE!!!
+
+and add your logo.ong of choice to the aroma directory
 
 You will need to store any tools that you want to use in the tools directory
 
@@ -57,13 +61,10 @@ mkbootimg
 unpackbootimg
 and any other scripts that you want aroma to use
 
-You will need to edit the aroma-config file to suit your needs and 
-add your logo.ong of choice to the aroma directory
-
 Using Anykernel-build-tools
 ===========================
 Use the anykernelbuild.sh
 
 This will build a standard kernel with a non-aroma installer zip, just flash and go!
 
-To use this method, you will need to edit the contents of anykernel-updater-script < DO NOT RENAME THIS FILE!!!
+To use this method, you will need to edit the contents of "anykernel-updater-script" < DO NOT RENAME THIS FILE!!!
