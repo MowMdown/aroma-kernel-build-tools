@@ -100,10 +100,16 @@ mkdir -p $UPDATE_ROOT/system/lib/modules
 find . -name '*.ko' -exec cp {} $UPDATE_ROOT/system/lib/modules/ \;
 
 mkdir -p $UPDATE_ROOT/META-INF/com/google/android
-cp -r $TOOLS_DIR/update-binary-installer $UPDATE_ROOT/META-INF/com/google/android
+cp $TOOLS_DIR/update-binary-installer $UPDATE_ROOT/META-INF/com/google/android
 cp -r $TOOLS_DIR/aroma $UPDATE_ROOT/META-INF/com/google/android
-cp -r $TOOLS_DIR/aroma-config $UPDATE_ROOT/META-INF/com/google/android
-cp -r $TOOLS_DIR/tools $UPDATE_ROOT/
+cp $TOOLS_DIR/aroma-config $UPDATE_ROOT/META-INF/com/google/android
+
+if [ -e $LOCAL_BUILD_DIR/tools ]
+then
+    mkdir -p $LOCAL_BUILD_DIR
+    cp -r $LOCAL_BUILD_DIR/tools $UPDATE_ROOT/tools
+if
+
 cp $TOOLS_DIR/update-binary $UPDATE_ROOT/META-INF/com/google/android
 (
     cat <<EOF
