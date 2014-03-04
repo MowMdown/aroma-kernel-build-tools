@@ -108,7 +108,7 @@ if [ -e $LOCAL_BUILD_DIR/tools ]
 then
     mkdir -p $LOCAL_BUILD_DIR
     cp -r $LOCAL_BUILD_DIR/tools $UPDATE_ROOT/tools
-    cp -r $TOOLS_DIR/boot_img_tools $UPDATE/tools
+    cp -r $TOOLS_DIR/boot_img_tools $UPDATE_ROOT/tools
 if
 
 cp $TOOLS_DIR/update-binary $UPDATE_ROOT/META-INF/com/google/android
