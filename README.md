@@ -12,7 +12,7 @@ CROSS_COMPILE=~/path/to/toolchain/linaro-4.x.x/bin/arm-eabi-
 
 HOST_CC=gcc
 
-LOCAL_BUILD_DIR=~/path/to/kernel/source
+LOCAL_BUILD_DIR=directory_containing_source
 
 TARGET_DIR=~/path/to/output/dir
 
