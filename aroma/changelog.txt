@@ -1,0 +1,271 @@
+82f027e updating built date
+9ae366d Attempting to get Beats hack moved to right Amp driver
+956543d adding Defconfig for easy building
+07c582c Increasing version number
+a673a71 PM / Sleep: Add wakeup_source_activate and wakeup_source_deactivate tracepoints
+502b327 PM / Sleep: Change wakeup source statistics to follow Android
+1ffb710 PM / Sleep: Look for wakeup events in later stages of device suspend
+81db007 power: remove pocket mode power check
+6aa9e2b vibrator: tone down HTC's message spew
+415ab02 Disable DIAG_XPST
+a08fc3e usb: tone down new HTC message spew
+f9bc5fa Remove enable_boost support
+db8c99b synaptics_3200: HTC added yet more debugging debugging spew
+d7fd7ad PM / devfreq: exynos4_bus: honor RCU lock usage
+33a1172 PM / devfreq: add locking documentation for recommended_opp
+2e80333 PM / devfreq: remove compiler error with module governors (2)
+ac439f5 PM / devfreq: Fix return value in devfreq_remove_governor()
+6606bd6 PM / devfreq: Fix incorrect argument in error message
+592e54e PM / devfreq: missing rcu_read_lock() added for find_device_opp()
+1c4a5bb PM / devfreq: exynos4_bus.c: Fixed an alignment of the func call args.
+c4ee494 PM / devfreq: Add sysfs node to expose available governors
+c996af5 PM / devfreq: allow sysfs governor node to switch governor
+d06d55e PM / devfreq: governors: add GPL module license and allow module build
+e412d63 PM / devfreq: map devfreq drivers to governor using name
+c41b6cd PM / devfreq: Use devm_* functions in exynos4_bus.c
+9f2c968 PM / OPP: using kfree_rcu() to simplify the code
+9f3e0c4 PM / OPP: predictable fail results for opp_find* functions, v2
+6129777 PM / OPP: Export symbols for module usage.
+c794e5e PM / OPP: RCU reclaim
+0d9d577 PM / OPP: Initialize OPP table from device tree
+396c1bd PM / devfreq: register governors with devfreq framework
+b1d2c27 PM / devfreq: provide hooks for governors to be registered
+14d274f PM / devfreq: export update_devfreq
+dc73e64 PM / devfreq: Add sysfs node for representing frequency transition information.
+cab47e7 PM / devfreq: documentation cleanups for devfreq header
+8c42c87 PM / devfreq: Add sysfs node to expose available frequencies
+58ed6d7 PM / devfreq: make devfreq_class static
+ead7015 PM / devfreq: fix sscanf handling for writable sysfs entries
+5ff4be8 PM / devfreq: kernel-doc typo corrections
+3617e6b PM / devfreq: Add current freq callback in device profile
+884b555 PM / devfreq: Add suspend and resume apis
+7517927 PM / devfreq: Core updates to support devices which can idle
+019e8c9 PM: devfreq: init performance/powersave governor
+500488b Remove extra frequency setting
+11d08e9 staging: android: Add some Kconfig help entries
+4bffb0f staging: android: Avoid using camelcase in binder.h
+5d67b4b staging: android: Fix two checkpatch issues in binder.c
+dd71680 bluetooth: bulk update to the CAF drivers
+685e939 Remove excess debugging
+867aa64 power: Remove legacy wakelock code.
+8c3723a PM / Sleep: Use wait queue to signal "no wakeup events in progress"
+4adf5bf rwsem: do not block readers at head of queue if other readers are active
+25f536a rwsem: implement support for write lock stealing on the fastpath
+09731c1 rwsem: simplify __rwsem_do_wake
+6cfcdfa rwsem: skip initial trylock in rwsem_down_write_failed
+b0c9eb85 rwsem: avoid taking wait_lock in rwsem_down_write_failed
+f98857c rwsem: use cmpxchg for trying to steal write lock
+d54af06 rwsem: more agressive lock stealing in rwsem_down_write_failed
+9bd5966 rwsem: simplify rwsem_down_write_failed
+6197012 rwsem: simplify rwsem_down_read_failed
+398666c rwsem: move rwsem_down_failed_common code into rwsem_down_{read,write}_failed
+647795c rwsem: shorter spinlocked section in rwsem_down_failed_common()
+6c77057 rwsem: make the waiter type an enumeration rather than a bitmask
+0e76293 rwsem: Implement writer lock-stealing for better scalability
+fbad6fd rwsem-spinlock: Implement writer lock-stealing for better scalability
+32b58f0 PM: Introduce suspend state PM_SUSPEND_FREEZE
+02bbdb4 cpufreq: Convert the cpufreq_driver_lock to use RCU
+3364e7a cpufreq: Convert the cpufreq_driver_lock to a rwlock
+94cf4cd Add BFQ
+4048fe9 Revert previous commit
+7bf6662 revertmeorchangeme
+5da9ab1 update .gitignore
+d520402 Drivers/cpufreq: Fix: Intellidemand went missing from Makefile
+1d74bfe 	deleted:    arch/arm/boot/compressed/ashldi3.S 	deleted:    arch/arm/boot/compressed/piggy.xzkern
+5b1fa26 Final commit so i can have clean build on tree'
+ae63709 Final commit so i can have clean build on tree'
+cbaeeff Updating build info
+ce15e0f Finaly cleanup of HTC 2.04 changes
+3df320f Applying HTC 2.04 Upstream patch
+06eee2d Move monarudo hsic timing initialization to a later in init_common
+cbf2772 EHCI: HSIC: Allow standalone power collapse when HSIC is active
+1e9ae3f usb: ehci-msm-hsic: Add asynchronous reset to HSIC
+77f1b69 usb: ehci-msm-hsic: Change HSIC reset sequence
+b70e381 usb: ehci-msm-hsic: Add support in device tree to MSM HSIC host
+afbf88a EHCI: HSIC: Add support to vote for SVS digital voltage
+93a087b usb: ehci-msm-hsic: Remove usage of MSM_GPIO_TO_INT
+0825f75 usb: Decrease autosuspend delay to 200ms upon usb disconnect
+9e4e1c0 usb: Add support to set autosuspend delay by controller driver
+d9b8d80 EHCI: HSIC: Fail root hub bus suspend when port is not enabled.
+dd546f6 msm: hsic: Disallow processor idle sleep while driving resume signal
+f2490fb USB: Prevent system suspend when HSIC device is active
+0057116 USB: Allow skipping device resume during system resume
+7d93394 msm: hsic: Retry port RESUME if unable to send SOFs within 3ms
+e770b6a EHCI: HSIC: Use counter for timeout in ulpi_read()
+591140d usb: ehci-msm-hsic: abort suspend when interrupts are pending
+a4934d5 Undo HTC's attempt to fix EHCI: HSIC: Use counter for timeout in ulpi_read()
+6d3017a Revert "USB: Allow skipping device resume during system resume"
+91b926b Revert "USB: Prevent system suspend when HSIC device is active"
+8bf493a 123
+5697dde cgroup: Add generic cgroup subsystem permission checks
+ade299b Linux 3.4.39
+d53e6c5 Revert "xen/blkback: Don't trust the handle from the frontend."
+9541f29 bonding: get netdev_rx_handler_unregister out of locks
+6b7a335 smsc75xx: fix jumbo frame support
+f134834 pch_gbe: fix ip_summed checksum reporting on rx
+441b2c3 net: add a synchronize_net() in netdev_rx_handler_unregister()
+1c176db ks8851: Fix interpretation of rxlen field.
+3d0a8bd ipv6: don't accept node local multicast traffic from the wire
+fdad522 ipv6: fix bad free of addrconf_init_net
+e9fd758 ipv6: don't accept multicast traffic with scope 0
+104d875 DM9000B: driver initialization upgrade
+0e5970f atl1e: drop pci-msi support because of packet corruption
+1b63ac2 aoe: reserve enough headroom on skbs
+1201f6d net: fix *_DIAG_MAX constants
+517f947 drivers: net: ethernet: cpsw: use netif_wake_queue() while restarting tx queue
+1ca07c6 drivers: net: ethernet: davinci_emac: use netif_wake_queue() while restarting tx queue
+fba14ee bonding: fix disabling of arp_interval and miimon
+8adba63 bonding: fix miimon and arp_interval delayed work race conditions
+32a22ab bonding: remove already created master sysfs link on failure
+7724e1d unix: fix a race condition in unix_release()
+251a951 thermal: shorten too long mcast group name
+0383845 8021q: fix a potential use-after-free
+a5e9fff tcp: undo spurious timeout after SACK reneging
+f0200a1 tcp: preserve ACK clocking in TSO
+01a1f4e sky2: Threshold for Pause Packet is set wrong
+6e771b0 sky2: Receive Overflows not counted
+5958803 net: remove a WARN_ON() in net_enable_timestamp()
+b168e40 tracing: Prevent buffer overwrite disabled for latency tracers
+702cad1 tracing: Protect tracer flags with trace_types_lock
+86fc835 ext4: use atomic64_t for the per-flexbg free_clusters count
+9b48165 ext4: convert number of blocks to clusters properly
+5890e97 efivars: Handle duplicate names from get_next_variable()
+de1a155 efivars: explicitly calculate length of VariableName
+e5817de Btrfs: fix space leak when we fail to reserve metadata space
+286d763 drm/i915: Don't clobber crtc->fb when queue_flip fails
+fba9b01 nfsd4: reject "negative" acl lengths
+c3807d1 ARM: cns3xxx: fix mapping of private memory region
+3f0499a loop: prevent bdev freeing while device in use
+6162bea usb: gadget: udc-core: fix a regression during gadget driver unbinding
+50f90ad Btrfs: don't drop path when printing out tree errors in scrub
+86329b5 Btrfs: limit the global reserve to 512mb
+97b557a Btrfs: fix race between mmap writes and compression
+8c3a0ab usb: xhci: Fix TRB transfer length macro used for Event TRB.
+322fe22 net/irda: add missing error path release_sock call
+4ed2d1b pnfs-block: removing DM device maybe cause oops when call dev_remove
+a66a3d8 mwifiex: cancel cmd timer and free curr_cmd in shutdown process
+9de57cb vt: synchronize_rcu() under spinlock is not nice...
+92a0b80 usb: ftdi_sio: Add support for Mitsubishi FX-USB-AW/-BD
+6b4a061 tty: atmel_serial_probe(): index of atmel_ports[] fix
+4903bdd xen-blkback: fix dispatch_rw_block_io() error path
+fc189ef xen/blkback: correctly respond to unknown, non-native requests
+c725a61 iommu/amd: Make sure dma_ops are set for hotplug devices
+b407b94 tg3: fix length overflow in VPD firmware parsing
+4b6cac1 b43: N-PHY: use more bits for offset in RSSI calibration
+b071d6d b43: A fix for DMA transmission sequence errors
+8523920 b43: N-PHY: increase initial value of "mind" in RSSI calibration
+26c530d rtlwifi: usb: add missing freeing of skbuff
+4ba8681 HID: usbhid: quirk for Realtek Multi-card reader
+e238964 ath9k_hw: revert chainmask to user configuration after calibration
+42719e5 can: sja1000: fix define conflict on SH
+a91704c sysfs: handle failure path correctly for readdir()
+2035827 sysfs: fix race between readdir and lseek
+8114240 staging: comedi: s626: fix continuous acquisition
+2ac1a0e Bluetooth: Add support for Dell[QCA 0cf3:817a]
+d8491072 Bluetooth: Fix not closing SCO sockets in the BT_CONNECT2 state
+50f6bee tile: expect new initramfs name from hypervisor file system
+be522e6 SUNRPC: Add barriers to ensure read ordering in rpc_wake_up_task_queue_locked
+6587e83 kernel/signal.c: use __ARCH_HAS_SA_RESTORER instead of SA_RESTORER
+1e392b0e signal: Define __ARCH_HAS_SA_RESTORER so we know whether to clear sa_restorer
+ced2036 block: row: Idling mechanism re-factoring
+dec4d7d block: row: Dispatch requests according to their io-priority
+198ea02 block: row: Aggregate row_queue parameters to one structure
+fd828bb block: row: fix sysfs functions - idle_time conversion
+8de8f32 block: row: Insert dispatch_quantum into struct row_queue
+0c51837 block: row: Add some debug information on ROW queues
+92e4c34 block: updates from CAF for ROW support
+85f1284 update ROW from CAF
+af11f0e Finishing import of Qualcomm ROW I/O Scheduler.
+41a543c adding s2w
+c629212 Added Qualcomm ROW I/O Scheduler
+a6249be 	modified:   arch/arm/mach-msm/acpuclock-8960.c
+ad50610 adding autobuild
+4e4331a cleaning up a few last items'
+ca128b1 cpufreq: set safe default min/max speeds from the config
+e6324b2 Fixing preferred boot clocks back to defaults
+7b168b5 fs: proc: stat: fix /proc/stat not showing all cpus
+706c6d4 drivers.thermal: updating msm8960tsens
+1bd34d5 Delay for throttling
+65a9f53 fixing thermal sensor value
+4e192af mpdecision: don't use sleep, cancel/resume wq instead
+8758365 mm touch it twice stfu git ill ammend later and want a clean build
+5123de5 fixing gpu idling issues
+c170631 adding interactivex2
+35c9f84 Adding build options for updated governors
+78260ca updating some governors for building
+e5022fb adding qdsp6v2 parts from mako
+e90b82c increase pet time
+9fafb50 Bumping back up to 450mhz optimum speed
+3224ac2 Patching thermalD upstream
+9d663f8 finishing forcing of beats hack
+bbf971a sound: Hack beats to always being enabled
+ef96b0a Update BadAss.
+0e677bd Updating msm_thermal upstream
+cf9242c mach-msm/cpufreq: set safe frequencies from config
+ca0bbdd Removing some intellidemand management code as it is unneeded
+3486c6d intellidemand: Don't update the policy->cur upon cpufreq driver failure
+b109faf intellidemand: remove unused min performance lock defines
+c30ec66 intellidemand: remove cpu cores autoplug capability (replaced by intelli_plug)
+7a047cd intellidemand: add default values for dbs sync and optimal tuneables
+d3e1c0a intellidemand: give intellidemand's cpu_dbs_info its own name
+a3f0b6f intellidemand: Add support to consider other cpu load when scaling frequencies
+15de1eb cpufreq: Avoid using smp_processor_id() in preemptible context
+2ddc417 Intellidemand: adjust the nr_run hysteresis for better UI response
+c2fea0e intellidemand: tweak for not using min performance lock
+7a6b3a6 intellidemand: add eco mode (dual core operations) bump version to 4.1
+115859c intellidemand: increase boost duration to 2.5 seconds from 1.5
+3bed724 intellidemand: code derps clean up!
+b610b88 Intellidemand: update for quadcore operations. bump version to 4.0
+99ecd4a intellidemand: add minimum cpu performance lock
+de748d7 intellidemand: add a run queue persistence to determine browsing state
+a694974 intellidemand: add bug fixes
+ad0edda intellidemand: Add boost pulse capability
+ca808af cpufreq/cpufreq_intellidemand: intellidemand cpufreq governor (version 4.0)
+2732a81 cpufreq/cpufreq_intellidemand: intellidemand cpufreq governor (version 4.0)
+c91db7f msm: kgsl: Make the GPU device aware of the next pending event
+149fb6c iommu/msm: fix the include guard in iommu.h
+85a6e38 Fixing initrd.img and a few final things from cherry-pick
+b28eb3d msm: kgsl: Remove extra interrupts when setting MMU state
+030ac96 msm: kgsl: Always reset global ts_cmp_enable on GPU interrupts
+b462d86 msm: cpufreq: fix a race between hotplug and cpufreq
+64573f2 msm: kgsl: Fix the address translation ranges for GPU IOMMU
+b936419 msm: kgsl: Simplify logic for VBIF registers across A3XX cores
+f4fb00a Adding proper max cpu core detection for governor setting
+5c1d974 adding I/O selection via cmdline
+0acc442 adding governor selection via cmdline
+bb1cf2b Mach-msm: inserting cmdline function for GPU control
+c60986e Updating new cortex makefile flags
+b591116 msm: kgsl: Ensure correct enable sequence for 2D core clock
+6202efc slimbus: Decrement channel reference during reconfigure now
+48fedf4 slimbus: Fix channel concurrent usage during reconfiguration sequence
+8dc8252 Sound Control: Sound control for WCD93xx codec
+db0bf5e msm: kgsl: Remove lowest power level
+5f95bf9 msm: vidc: enable video core clock to 266Mhz
+f37d239 Finishing cherry-pick
+83dd625 arch/arm/mach-msm: Allow building without htc_util and fix building without it
+a57eaaa mach-msm: clock-8960 : Fix nominal 3d clock choice
+fb0f790 Moving 2d KGSL stuffs into monarudo board files instead of 8960 board files
+100f0a0 adjusting mbps conversion rates for kgsl
+e468026 sched: remove HTC attempt to patch exit/rename race condition
+ff222f3 lowmemorykiller: remove cma support (not available in DNA kernel)
+27835f0 android/lowmemorykiller: Ignore tasks with freed mm
+f6db96b lowmemorykiller: pull in CAF's version
+4279971 wakelock: instead of directly going to suspend_mem, use the new suspend_freeze
+0825852 PM: Introduce suspend state PM_SUSPEND_FREEZE
+3666ef1 rwsem: steal writing sem for better performance
+b0a11b7 cpufreq: Convert the cpufreq_driver_lock to use RCU
+73871fb cpufreq: Convert the cpufreq_driver_lock to a rwlock
+0dd3141 Disable CONFIG_MSM_SHOW_RESUME_IRQ
+f342cde Don't force RUN_QUEUE_STATS to be on
+040a08f attempting to force vsync in board file
+0532964 msm_fb: display: blt always enabled for 720p,1080p, secure buf
+bb5b51f msm_fb: display: Fix flickering when BLT is enabled/disabled
+cf5f3d4 msm: mdp: Set clock rates on external interface as needed
+9a44664 msm: mdp: Disable vsync in video off.
+abc227d msm: mdp: Send fake vsync only when enabled from userspace
+c7e29dc enabling cmdline control of screen of clock
+5b5284f mach-msm: Board-monarudo-gpu.c update GPU OC for proper bottleneck
+fcbdea1 experimental build with linaro gcc 4.8
+c8048b6 acpu: export krait variant to debugfs
+6f7ef02 updating Ondemand after removal of cpuinit
+a40c688 mach-msm: acpuclock-8960.c: Add initial OC
