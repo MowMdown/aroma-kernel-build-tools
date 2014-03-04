@@ -108,7 +108,7 @@ EOF
   sed -e "s|@@SYSTEM_PARTITION@@|$SYSTEM_PARTITION|" \
       -e "s|@@FLASH_BOOT@@|$FLASH_BOOT|" \
       -e "s|@@FIX_PERMISSIONS@@|$permissions |" \
-      < $TOOLS_DIR/updater-script
+      < $TOOLS_DIR/aroma-updater-script
 ) > $UPDATE_ROOT/META-INF/com/google/android/updater-script
 cp -r $TOOLS_DIR/aroma $UPDATE_ROOT/META-INF/com/google/android
 cp -r $TOOLS_DIR/tools $UPDATE_ROOT/tools
