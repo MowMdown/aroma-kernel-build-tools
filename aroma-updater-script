@@ -1,4 +1,3 @@
-
 ui_print("Mounting /system");
 run_program("/sbin/mount", "/dev/block/mmcblk0p32", "/system");
 
@@ -20,12 +19,18 @@ run_program("/sbin/busybox", "mount", "/system");
 run_program("/tmp/modclean.sh");
 set_progress(0.3);
 
-ui_print("Cleaning up so we can start from scratch........");
-#run_program("/sbin/busybox", "dd", "if=/tmp/htcboot.img", "of=/dev/block/mmcblk0p19");
-ui_print("Pull the boot.img from your phone...");
-run_program("/sbin/busybox", "dd", "if=/dev/block/mmcblk0p19", "of=/tmp/boot.img");
-ui_print("Extract boot.img...");
-run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
+ifelse(
+    package_extract_file("boot.img", "/tmp/boot.img"),
+(
+    ui_print("Using prebuilt boot.img");
+),
+(
+    ui_print("Pull the boot.img from your phone...");
+    run_program("/sbin/busybox", "dd", "if=/dev/block/mmcblk0p19", "of=/tmp/boot.img");
+    ui_print("Extract boot.img...");
+    run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
+));
+
 ui_print("Applying cmdline settings...");
 run_program("/tmp/cmdline.sh");
 
@@ -59,8 +64,8 @@ run_program("/tmp/edit_ramdisk.sh");
 run_program("/tmp/mkbootimg.sh");
 
 ui_print("   Renaming binaries...");
-ui_print("  /system/bin/thermald -> thermald_bck");
-ui_print("  /system/bin/mpdecision -> mpdecision_bck");
+ui_print("  /system/bin/thermald -> thermald_old");
+ui_print("  /system/bin/mpdecision -> mpdecision_old");
 run_program("/tmp/compatibility.sh");
 ui_print("Installing modules");
 package_extract_dir("system", "/system");
