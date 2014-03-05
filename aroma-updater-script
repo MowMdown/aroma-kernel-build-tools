@@ -1,3 +1,4 @@
+
 ui_print("Mounting /system");
 run_program("/sbin/mount", "/dev/block/mmcblk0p32", "/system");
 
