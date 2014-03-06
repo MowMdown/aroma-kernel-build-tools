@@ -77,7 +77,7 @@ perl -pi -e 's/(CONFIG_LOCALVERSION="[^"]*)/\1-'"$VERSION"'"/' .config
 
 $MAKE -j$N_CORES
 
-msg Kernel built successfully, building $ZIP*.zip
+msg Kernel built successfully, building $ZIP.zip
 
 mkdir -p $UPDATE_ROOT
 
@@ -100,7 +100,7 @@ mkdir -p $UPDATE_ROOT/system/lib/modules
 find . -name '*.ko' -exec cp {} $UPDATE_ROOT/system/lib/modules/ \;
 
 mkdir -p $UPDATE_ROOT/META-INF/com/google/android
-cp $TOOLS_DIR/update-binary $UPDATE_ROOT/META-INF/com/google/android
+cp $TOOLS_DIR/aroma-update-binary $UPDATE_ROOT/META-INF/com/google/android/update-binary
 (
     cat <<EOF
 $BANNER
@@ -113,7 +113,7 @@ EOF
 cp -r $TOOLS_DIR/aroma $UPDATE_ROOT/META-INF/com/google/android
 cp -r $TOOLS_DIR/tools $UPDATE_ROOT/tools
 cp $TOOLS_DIR/aroma-config $UPDATE_ROOT/META-INF/com/google/android
-cp $TOOLS_DIR/update-binary-installer $UPDATE_ROOT/META-INF/com/google/android
+cp $TOOLS_DIR/aroma-update-binary-installer $UPDATE_ROOT/META-INF/com/google/android/update-binary-installer
 (
     cd $UPDATE_ROOT
     zip -r ../update.zip .

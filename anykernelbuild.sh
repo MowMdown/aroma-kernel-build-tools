@@ -100,7 +100,7 @@ mkdir -p $UPDATE_ROOT/system/lib/modules
 find . -name '*.ko' -exec cp {} $UPDATE_ROOT/system/lib/modules/ \;
 
 mkdir -p $UPDATE_ROOT/META-INF/com/google/android
-cp $TOOLS_DIR/update-binary $UPDATE_ROOT/META-INF/com/google/android
+cp $TOOLS_DIR/anykernel-update-binary $UPDATE_ROOT/META-INF/com/google/android/update-binary
 (
     cat <<EOF
 $BANNER
