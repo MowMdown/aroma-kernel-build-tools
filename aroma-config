@@ -178,9 +178,9 @@ else
 	  "3d Gpu Speed",                "",                      2,  #-- Group 1. key = "selected"
 	    "550 mhz",        "3d Gpu clock set at 550mhz HIGH OVERCLOCK",       0,      #-- selected = 1
 	    "500 mhz",        "3d Gpu clock set at 500mhz HIGH OVERCLOCK",       0,      #-- selected = 2
-	    "450 mhz",        "3d Gpu clock set at 450mhz",       1,      #-- selected = 3
-           "300 mhz",        "3d Gpu clock set at 400mhz",        0,      #-- selected = 4
-           "266 mhz",        "3d Gpu clock set at 400mhz",        0       #-- selected = 5
+	    "450 mhz",        "3d Gpu clock set at 450mhz",        1,      #-- selected = 3
+            "300 mhz",        "3d Gpu clock set at 300mhz",        0,      #-- selected = 4
+            "266 mhz",        "3d Gpu clock set at 266mhz",        0       #-- selected = 5
 
   );
 endif;
@@ -213,26 +213,6 @@ selectbox(
   "Disabled","",0,
   "Enabled Without Capacitive Backlight","",0,
   "Enabled With Capacitive Backlight","Blackout Default",1
-);
-
-selectbox(
-  "SWEEP2WAKE_STARTKEY: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "sweep_start.prop",
-  "Back","Default",1,
-  "Home","",0,
-  "Menu","",0
-);
-
-selectbox(
-  "SWEEP2WAKE_ENDKEY: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "sweep_end.prop",
-  "Back","",0,
-  "Home","",0,
-  "Menu","Default",1
 );
 
 selectbox(
