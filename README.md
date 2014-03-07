@@ -68,3 +68,10 @@ Use the anykernelbuild.sh
 This will build a standard kernel with a non-aroma installer zip, just flash and go!
 
 To use this method, you will need to edit the contents of "anykernel-updater-script" < DO NOT RENAME THIS FILE!!!
+
+Other
+=====
+If you wish to use any additional files, you can create a system directory inside the LOCAL_BUILD_DIR 
+and store anything you wish to send to the system after mounting. 
+
+Also if you wish to use a prebuild boot.img just add it to the root of the LOCAL_BUILD_DIR and it will use that to inject the zImage into it.
