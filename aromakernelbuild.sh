@@ -92,7 +92,7 @@ fi
 if [ -e $LOCAL_BUILD_DIR/boot.img ]
 then
     mkdir -p $LOCAL_BUILD_DIR
-    cp -r $LOCAL_BUILD_DIR/boot.img $UPDATE_ROOT
+    cp $LOCAL_BUILD_DIR/boot.img $UPDATE_ROOT
 fi
 
 if [ -e $LOCAL_BUILD_DIR/system ]
