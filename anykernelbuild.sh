@@ -77,7 +77,7 @@ perl -pi -e 's/(CONFIG_LOCALVERSION="[^"]*)/\1-'"$VERSION"'"/' .config
 
 $MAKE -j$N_CORES
 
-msg Kernel built successfully, building $ZIP*.zip
+msg Kernel built successfully, building $ZIP.zip
 
 mkdir -p $UPDATE_ROOT
 
