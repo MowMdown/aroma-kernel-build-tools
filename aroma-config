@@ -26,8 +26,6 @@ splash(
     "logo"
 );
 
-
-
 fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
   theme("sense");
   
@@ -52,7 +50,6 @@ viewbox(
   
     "@welcome"
 );
-
 
 agreebox(
     "<~Terms And Conditions>",
@@ -102,7 +99,6 @@ alert (
  "OK"
  );
  endif;
-
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
@@ -217,9 +213,9 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "sweep.prop",
-  "Disabled","",0,
+  "Disabled","Default",1,
   "Enabled Without Capacitive Backlight","",0,
-  "Enabled With Capacitive Backlight","Blackout Default",1
+  "Enabled With Capacitive Backlight","",0
 );
 
 selectbox(
@@ -227,8 +223,8 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "tap.prop",
-  "Disabled","",0,
-  "Enabled","Default",1
+  "Disabled","Default",1,
+  "Enabled","",0
 );
 
 ini_set("text_next", "Install Now");
