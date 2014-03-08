@@ -1,3 +1,4 @@
+a698adc Need to add a define for this to avoid build errors if # CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE is not set
 6771ad2 Update Kconfig
 2361c93 Update msm_thermal.c
 0d24bbd Must have removed these lines
