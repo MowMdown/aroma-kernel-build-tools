@@ -117,7 +117,7 @@ else
 	    "1.56 ghz",        "Max Clock set to 1.56ghz",       0,      #-- selected = 2
 	    "1.67 ghz",        "Max Clock set to 1.67ghz",       0,      #-- selected = 3
 	    "1.73 ghz",        "Max Clock set to 1.73ghz",       0,      #-- selected = 4
-	    "1.78 ghz",        "Max Clock set to 1.78ghz",       0,      #-- selected = 5
+	    "1.78 ghz",        "Max Clock set to 1.78ghz",       0      #-- selected = 5
 	    
 
   );
