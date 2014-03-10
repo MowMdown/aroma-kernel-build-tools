@@ -89,6 +89,15 @@ menubox(
 	                          "Recommended for advanced users",                            "@customize"     #-- selected = 2
 );
 
+selectbox(
+  "Boot.img Install",
+  "Please Select:",
+  "icons/personalize",
+  "boot.prop",
+  "zImage","Default",1,
+  "ViperDna 3.1.0 Boot.img","",0
+);
+
 if (prop("type.prop","selected")=="2") then
 alert (
  "** INFORMATION **",
