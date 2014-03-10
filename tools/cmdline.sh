@@ -48,22 +48,6 @@ case $val in
 esac
 ##end Get cpu maxclock from aroma tmp
 
-##Get CPU max screen off clock from aroma tmp
-val=$(cat /tmp/aroma-data/scroff.prop | cut -d"=" -f2)
-case $val in
-  1)
-    maxscroff="594000"
-    ;;
-  2)
-    maxscroff="540000"
-    ;;
-  3)
-    maxscroff="486000"
-    ;;
-esac
-##end Get CPU max screen off clock from aroma tmp
-
-
 ##Get 3dgpuoc from aroma tmp
 val=$(cat /tmp/aroma-data/3dgpu.prop | cut -d"=" -f2)
 case $val in
@@ -152,21 +136,6 @@ case $cmdline in
 	;;
 esac
 #end gov
-
-#Add maxscroff to the kernels cmdline.
-cmdline=$(cat /tmp/boot.img-cmdline)
-searchString="maxscroff="
-maxscroff="maxscroff="$maxscroff
-case $cmdline in
-  "$searchString"* | *" $searchString"*)
-   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/maxscroff=[^ ]\+//')>/tmp/boot.img-cmdline
-	echo $(cat /tmp/boot.img-cmdline)\ $maxscroff>/tmp/boot.img-cmdline
-	;;  
-  *)
-	echo $(cat /tmp/boot.img-cmdline)\ $maxscroff>/tmp/boot.img-cmdline
-	;;
-esac
-#end maxscroff
 
 #Add 3dgpu to the kernels cmdline.
 cmdline=$(cat /tmp/boot.img-cmdline)

@@ -147,27 +147,6 @@ endif;
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
-	  "scroff.prop",
-	  "selected=2\n"    #-- Default CPU Clock at 1.5ghz
-  );
-else
-  selectbox(
-      "CPU Speeds",
-      "Please select The Min cpu Speed:",
-      "@default",
-      "scroff.prop",
-
-	  "Max Screen Off Clock",      "",                         2,  #-- Group 2. key = "selected"
-		"594 mhz",     "Max Screen Off clock @ 594mhz",        0,      #-- selected = 1
-		"540 mhz",     "Max Screen Off clock @ 540mhz",        0,      #-- selected = 2
-		"486 mhz",     "Max Screen Off clock @ 486mhz",        1       #-- selected = 3
-
-  );
-endif;
-
-
-if (prop("type.prop","selected")=="1") then
-  writetmpfile(
 	  "3dgpu.prop",
 	  "selected=3\n"    #-- Default 3d GPU Clock of 450mhz
   );
@@ -213,9 +192,9 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "sweep.prop",
-  "Disabled","Default",1,
-  "Enabled Without Capacitive Backlight","",0,
-  "Enabled With Capacitive Backlight","",0
+  "Disabled","",0,
+  "Sweep2Sleep Only","",0,
+  "Sweep2Wake / Sweep2Sleep","Blackout Default",1
 );
 
 selectbox(
@@ -223,8 +202,8 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "tap.prop",
-  "Disabled","Default",1,
-  "Enabled","",0
+  "Disabled","",0,
+  "Enabled","Default",0
 );
 
 ini_set("text_next", "Install Now");

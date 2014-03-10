@@ -10,12 +10,12 @@ case $val in
     sweep2wakeoff
     ;;
   2)
-    #on but no button backlight
+    #Sweep2Sleep Only
     s2w="1"
     sweep2wakeon
     ;;
   3)
-    #on with backlight
+    #Sweep2Wake and Sweep2Sleep
     s2w="2"
     sweep2wakeon
     ;;
@@ -36,32 +36,6 @@ case $val in
     ;;
 esac
 
-#Add s2w to the kernels cmdline.
-val=$(cat /tmp/aroma-data/sweep_start.prop | cut -d"=" -f2)
-case $val in
-  1)
-    s2w_start="BACK"
-    ;;
-  2)
-    s2w_start="HOME"
-    ;;
-  3)
-    s2w_start="MENU"
-    ;;
-esac
-
-val=$(cat /tmp/aroma-data/sweep_end.prop | cut -d"=" -f2)
-case $val in
-  1)
-    s2w_end="BACK"
-    ;;
-  2)
-    s2w_end="HOME"
-    ;;
-  3)
-    s2w_end="MENU"
-    ;;
-esac
 cmdline=$(cat /tmp/boot.img-cmdline)
 searchString="s2w="
 s2w="s2w="$s2w
@@ -86,31 +60,3 @@ case $cmdline in
 	echo $(cat /tmp/boot.img-cmdline)\ $dt2w>/tmp/boot.img-cmdline
 	;;
 esac
-
-cmdline=$(cat /tmp/boot.img-cmdline)
-searchString="s2w_start="
-s2w_start="s2w_start="$s2w_start
-case $cmdline in
-  "$searchString"* | *" $searchString"*)
-   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/s2w_start=[^ ]\+//')>/tmp/boot.img-cmdline
-	echo $(cat /tmp/boot.img-cmdline)\ $s2w_start>/tmp/boot.img-cmdline
-	;;  
-  *)
-	echo $(cat /tmp/boot.img-cmdline)\ $s2w_start>/tmp/boot.img-cmdline
-	;;
-esac
-
-cmdline=$(cat /tmp/boot.img-cmdline)
-searchString="s2w_end="
-s2w_end="s2w_end="$s2w_end
-case $cmdline in
-  "$searchString"* | *" $searchString"*)
-   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/s2w_end=[^ ]\+//')>/tmp/boot.img-cmdline
-	echo $(cat /tmp/boot.img-cmdline)\ $s2w_end>/tmp/boot.img-cmdline
-	;;  
-  *)
-	echo $(cat /tmp/boot.img-cmdline)\ $s2w_end>/tmp/boot.img-cmdline
-	;;
-esac
-
-
