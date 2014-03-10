@@ -13,7 +13,7 @@ set_perm(0, 0, 0777, "/tmp/mkbootimg");
 set_perm(0, 0, 0777, "/tmp/unpackbootimg");
 set_perm(0, 0, 0777, "/tmp/busybox");
 
-set_progress(0.3);
+set_progress(0.25);
 
 ifelse(
     package_extract_file("boot.img", "/tmp/boot.img"),
@@ -34,6 +34,8 @@ run_program("/tmp/cmdline.sh");
 ui_print("   Renaming binaries...");
 ui_print("  /system/bin/thermald -> thermald_old");
 ui_print("  /system/bin/mpdecision -> mpdecision_old");
+
+set_progress(0.5);
 
 if
     file_getprop("/tmp/aroma-data/sweep.prop","selected.0") == "1"
@@ -56,6 +58,8 @@ ui_print("-----   (Use AOSP instead: Hold Vol.down+PWR for about a second)");
 endif;
 run_program("/tmp/sweep2wake.sh");
 
+set_progress(0.75);
+
 ui_print("Fixing your ramdisk...");
 ui_print("  removing governor overrides...");
 ui_print("Looking for busybox...");
@@ -76,6 +80,8 @@ ui_print("Wiping /cache");
 run_program("/sbin/busybox", "mount", "/cache");
 delete_recursive("/cache/");
 run_program("/sbin/busybox", "umount", "/cache");
+
+set_progress(1.0);
 
 ui_print("##############################");
 ui_print("#                             ");
