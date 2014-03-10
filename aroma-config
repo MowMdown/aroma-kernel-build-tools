@@ -114,12 +114,10 @@ else
 
 	  "Cpu max Speed",                "",                      2,  #-- Group 1. key = "selected"
 	    "1.51 ghz",        "Max Clock set to 1.51ghz",       1,      #-- selected = 1
-	    "1.53 ghz",        "Max Clock set to 1.53ghz",       0,      #-- selected = 2
+	    "1.56 ghz",        "Max Clock set to 1.56ghz",       0,      #-- selected = 2
 	    "1.67 ghz",        "Max Clock set to 1.67ghz",       0,      #-- selected = 3
-	    "1.75 ghz",        "Max Clock set to 1.75ghz",       0,      #-- selected = 4
+	    "1.73 ghz",        "Max Clock set to 1.73ghz",       0,      #-- selected = 4
 	    "1.78 ghz",        "Max Clock set to 1.78ghz",       0,      #-- selected = 5
-	    "1.80 ghz",        "Max Clock set to 1.80ghz",       0,      #-- selected = 6
-	    "1.83 ghz",        "Max Clock set to 1.83ghz",       0      #-- selected = 7
 	    
 
   );
