@@ -1,3 +1,6 @@
+4ddbf51 Bump Version 0.3.3
+733eeb8 change i2c listen rates to reflect Showps hammerhead patch in hopes for wake from deep sleep
+74fac1f Add s2w_s2sonly cmdline option
 9b85eef Bump Version 0.3.2
 356968e Change S2W and S2S to a single file 0=OFF 1=S2W/S2S 2=S2SONLY
 1b6a4cc Updata S2W_Y_LIMIT for our device

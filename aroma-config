@@ -191,8 +191,16 @@ selectbox(
   "icons/personalize",
   "sweep.prop",
   "Disabled","",0,
-  "Sweep2Wake / Sweep2Sleep","Blackout Default",1,
-  "Sweep2Sleep Only","",0
+  "Sweep2Wake","Default",1
+);
+
+selectbox(
+  "SWEEP2SLEEPONLY: CONFIG",
+  "Please Select:",
+  "icons/personalize",
+  "sweepoff.prop",
+  "Disabled","Default",1,
+  "Enabled","",0
 );
 
 selectbox(

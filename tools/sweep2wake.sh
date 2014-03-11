@@ -10,14 +10,24 @@ case $val in
     sweep2wakeoff
     ;;
   2)
-    #Sweep2Sleep Only
+    #Sweep2Wake
     s2w="1"
     sweep2wakeon
     ;;
-  3)
-    #Sweep2Wake and Sweep2Sleep
-    s2w="2"
-    sweep2wakeon
+esac
+
+#get sweep2sleep only setting
+val=$(cat /tmp/aroma-data/sweepoff.prop | cut -d"=" -f2)
+case $val in
+  1)
+    #disabled
+    s2s="0"
+    sweep2sleeponlyoff
+    ;;
+  2)
+    #enabled
+    s2s="1"
+    sweep2sleeponlyon
     ;;
 esac
 
@@ -46,6 +56,18 @@ case $cmdline in
 	;;  
   *)
 	echo $(cat /tmp/boot.img-cmdline)\ $s2w>/tmp/boot.img-cmdline
+	;;
+esac
+cmdline=$(cat /tmp/boot.img-cmdline)
+searchString="s2s="
+s2s="s2s="$s2s
+case $cmdline in
+  "$searchString"* | *" $searchString"*)
+   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/s2s=[^ ]\+//')>/tmp/boot.img-cmdline
+	echo $(cat /tmp/boot.img-cmdline)\ $s2s>/tmp/boot.img-cmdline
+	;;  
+  *)
+	echo $(cat /tmp/boot.img-cmdline)\ $s2s>/tmp/boot.img-cmdline
 	;;
 esac
 cmdline=$(cat /tmp/boot.img-cmdline)
