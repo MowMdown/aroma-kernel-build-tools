@@ -96,12 +96,6 @@ then
     permissions=`( cd $LOCAL_BUILD_DIR/system && find . -type f -exec echo -n 'set_perm(0, 0, 0755, "/system/{}"); ' \; )`
 fi
 
-if [ -e $LOCAL_BUILD_DIR/boot.img ]
-then
-    mkdir -p $LOCAL_BUILD_DIR
-    cp $LOCAL_BUILD_DIR/boot.img $UPDATE_ROOT
-fi
-
 mkdir -p $UPDATE_ROOT/system/lib/modules
 find . -name '*.ko' -exec cp {} $UPDATE_ROOT/system/lib/modules/ \;
 
