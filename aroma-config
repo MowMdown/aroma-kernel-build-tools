@@ -212,6 +212,25 @@ selectbox(
   "Enabled","Default",1
 );
 
+alert (
+ "** INFORMATION **",
+ "The prebuilt boot.img is a good idea to use if you are upgrading from a\n"+
+ "previous kernel version by either Zarboz or .torrented\n"+
+ "However if you experience ROM issues replace the prebuilt boot.img in this zip\n"+
+ "with the one from your ROM and flash again",
+ "icons/alert",
+ "OK"
+ );
+
+selectbox(
+  "BOOT.IMG: CONFIG",
+  "Warning Not Using Prebuilt boot.img may cause issues!",
+  "icons/personalize",
+  "boot.prop",
+  "Use","Uses prebuilt boot.img",1,
+  "Do Not Use","Does not use prebuilt boot.img",0
+);
+
 ini_set("text_next", "Install Now");
 
 viewbox(

@@ -15,15 +15,18 @@ set_perm(0, 0, 0777, "/tmp/busybox");
 
 set_progress(0.25);
 
-ifelse(
-    package_extract_file("boot.img", "/tmp/boot.img"),
-(
+if
+    file_getprop("/tmp/aroma-data/boot.prop","selected.0") == "1"
+then
     ui_print("Using prebuilt boot.img");
-),
-(
+    package_extract_file("boot.img", "/tmp/boot.img");
+endif;
+if
+    file_getprop("/tmp/aroma-data/boot.prop","selected.0") == "2"
+then
     ui_print("Pull the boot.img from your phone...");
     run_program("/sbin/busybox", "dd", "if=/dev/block/mmcblk0p19", "of=/tmp/boot.img");
-));
+endif;
 
 ui_print("Extract boot.img...");
 run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
@@ -38,23 +41,21 @@ ui_print("  /system/bin/mpdecision -> mpdecision_old");
 set_progress(0.5);
 
 if
-    file_getprop("/tmp/aroma-data/sweep.prop","selected.0") == "1"
-then
-ui_print("-- deactivating sweep2wake...");
-endif;
-if
     file_getprop("/tmp/aroma-data/sweep.prop","selected.0") == "2"
 then
-ui_print("-- activating sweep2sleep only...");
+ui_print("-- activating sweep2wake...");
 ui_print("----- Deactivating HTC screenshot (PWR+HOME)...");
 ui_print("-----   (Use AOSP instead: Hold Vol.down+PWR for about a second)");
 endif;
 if
-    file_getprop("/tmp/aroma-data/sweep.prop","selected.0") == "3"
+    file_getprop("/tmp/aroma-data/sweepoff.prop","selected.0") == "2"
 then
-ui_print("-- activating sweep2wake and sweep2sleep...");
-ui_print("----- Deactivating HTC screenshot (PWR+HOME)...");
-ui_print("-----   (Use AOSP instead: Hold Vol.down+PWR for about a second)");
+ui_print("-- activating sweep2sleep only...");
+endif;
+if
+    file_getprop("/tmp/aroma-data/tap.prop","selected.0") == "2"
+then
+ui_print("-- activating doubletap2wake...");
 endif;
 run_program("/tmp/sweep2wake.sh");
 
