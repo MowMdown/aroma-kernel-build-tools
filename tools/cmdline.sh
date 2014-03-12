@@ -1,10 +1,8 @@
 #!/sbin/sh
 #Features: 
-#maxkhz/minkhz/gov/maxscroff added to the kernels cmdline
+#maxkhz/minkhz added to the kernels cmdline
 #clean cmdline of foreigns in case of something wicked is going on in there
 #(supports my kernel edits, so that the kernel boots with that values)
-
-
 
 ##Get CPU MINCLOCK from aroma tmp
 val=$(cat /tmp/aroma-data/minkhz.prop | cut -d"=" -f2)
@@ -38,12 +36,6 @@ case $val in
     ;;
  5)
     maxkhz="1782000"
-    ;;
-  6)
-    maxkhz="1809000"
-    ;;
-  7)
-    maxkhz="1836000"
     ;;
 esac
 ##end Get cpu maxclock from aroma tmp

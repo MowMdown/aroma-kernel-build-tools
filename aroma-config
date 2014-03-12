@@ -136,7 +136,7 @@ else
       "minkhz.prop",
 
 	  "Cpu min Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "192 mhz",        "Min Clock set to 192 mhz",       1,      #-- selected = 1
+	    "189 mhz",        "Min Clock set to 189 mhz",       1,      #-- selected = 1
 	    "384 mhz",        "Min Clock set to 384 mhz",       0,      #-- selected = 2
 	    "432 mhz",        "Min Clock set to 432 mhz",       0      #-- selected = 3
 
@@ -178,8 +178,8 @@ else
       "2dgpu.prop",
 
 	  "2d Gpu Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "300 mhz",        "2d Gpu clock set at 300mhz",       1,      #-- selected = 1
-	    "266 mhz",        "2d Gpu clock set at 266mhz",       0,      #-- selected = 2
+	    "300 mhz",        "2d Gpu clock set at 300mhz",       0,      #-- selected = 1
+	    "266 mhz",        "2d Gpu clock set at 266mhz",       1,      #-- selected = 2
 	    "200 mhz",        "2d Gpu clock set at 200mhz",       0       #-- selected = 3
 
   );
