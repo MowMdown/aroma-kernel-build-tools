@@ -10,7 +10,7 @@
 val=$(cat /tmp/aroma-data/minkhz.prop | cut -d"=" -f2)
 case $val in
   1)
-    minkhz="192000"
+    minkhz="189000"
     ;;
   2)
     minkhz="384000"
@@ -52,21 +52,18 @@ esac
 val=$(cat /tmp/aroma-data/3dgpu.prop | cut -d"=" -f2)
 case $val in
   1)
-    gpu3d="550000000"
+    gpu3d="533333000"
     ;;
   2)
-    gpu3d="500000000"
+    gpu3d="487500000"
     ;;
   3)
-    gpu3d="450000000"
-    ;;
-  4)
     gpu3d="400000000"
     ;;
-  5)
-    gpu3d="300000000"
+  4)
+    gpu3d="320000000"
     ;;
-  6)
+  5)
     gpu3d="266667000"
     ;;
 esac

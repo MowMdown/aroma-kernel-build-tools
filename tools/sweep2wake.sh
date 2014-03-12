@@ -46,6 +46,21 @@ case $val in
     ;;
 esac
 
+#get pocket_detect setting
+val=$(cat /tmp/aroma-data/pd.prop | cut -d"=" -f2)
+case $val in
+  1)
+    #disabled
+    pd="0"
+    pocketdetectoff
+    ;;
+  2)
+    #enabled
+    pd="1"
+    pocketdetecton
+    ;;
+esac
+
 cmdline=$(cat /tmp/boot.img-cmdline)
 searchString="s2w="
 s2w="s2w="$s2w
@@ -75,10 +90,22 @@ searchString="dt2w="
 dt2w="dt2w="$dt2w
 case $cmdline in
   "$searchString"* | *" $searchString"*)
-   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/s2w=[^ ]\+//')>/tmp/boot.img-cmdline
+   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/dt2w=[^ ]\+//')>/tmp/boot.img-cmdline
 	echo $(cat /tmp/boot.img-cmdline)\ $dt2w>/tmp/boot.img-cmdline
 	;;  
   *)
 	echo $(cat /tmp/boot.img-cmdline)\ $dt2w>/tmp/boot.img-cmdline
+	;;
+esac
+cmdline=$(cat /tmp/boot.img-cmdline)
+searchString="pd="
+pd="pd="$pd
+case $cmdline in
+  "$searchString"* | *" $searchString"*)
+   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/pd=[^ ]\+//')>/tmp/boot.img-cmdline
+	echo $(cat /tmp/boot.img-cmdline)\ $pd>/tmp/boot.img-cmdline
+	;;  
+  *)
+	echo $(cat /tmp/boot.img-cmdline)\ $pd>/tmp/boot.img-cmdline
 	;;
 esac

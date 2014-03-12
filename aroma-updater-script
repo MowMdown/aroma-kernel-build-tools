@@ -57,6 +57,11 @@ if
 then
 ui_print("-- activating doubletap2wake...");
 endif;
+if
+    file_getprop("/tmp/aroma-data/pd.prop","selected.0") == "2"
+then
+ui_print("-- activating pocket_detect...");
+endif;
 run_program("/tmp/sweep2wake.sh");
 
 set_progress(0.75);

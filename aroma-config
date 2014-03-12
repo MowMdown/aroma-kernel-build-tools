@@ -158,7 +158,7 @@ else
 	  "3d Gpu Speed",                "",                      2,  #-- Group 1. key = "selected"
 	    "550 mhz",        "3d Gpu clock set at 550mhz HIGH OVERCLOCK",       0,      #-- selected = 1
 	    "500 mhz",        "3d Gpu clock set at 500mhz HIGH OVERCLOCK",       0,      #-- selected = 2
-	    "450 mhz",        "3d Gpu clock set at 450mhz",        1,      #-- selected = 3
+	    "400 mhz",        "3d Gpu clock set at 400mhz",        1,      #-- selected = 3
             "300 mhz",        "3d Gpu clock set at 300mhz",        0,      #-- selected = 4
             "266 mhz",        "3d Gpu clock set at 266mhz",        0       #-- selected = 5
 
@@ -210,6 +210,15 @@ selectbox(
   "tap.prop",
   "Disabled","",0,
   "Enabled","Default",1
+);
+
+selectbox(
+  "POCKET_DETECT: CONFIG",
+  "We Recommend that you leave this enabled!",
+  "icons/personalize",
+  "pd.prop",
+  "Disabled","",0,
+  "Pocket Detect","Default",1
 );
 
 alert (
