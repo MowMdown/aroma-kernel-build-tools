@@ -1,17 +1,16 @@
 #!/sbin/sh
 
-
 #get sweep2wake setting
 val=$(cat /tmp/aroma-data/sweep.prop | cut -d"=" -f2)
 case $val in
   1)
-    #disabled
-    s2w="0"
+    #enabled
+    s2w="1"
     sweep2wakeoff
     ;;
   2)
-    #Sweep2Wake
-    s2w="1"
+    #disabled
+    s2w="0"
     sweep2wakeon
     ;;
 esac
@@ -20,13 +19,13 @@ esac
 val=$(cat /tmp/aroma-data/sweepoff.prop | cut -d"=" -f2)
 case $val in
   1)
-    #disabled
-    s2s="0"
+    #enabled
+    s2s="1"
     sweep2sleeponlyoff
     ;;
   2)
-    #enabled
-    s2s="1"
+    #disabled
+    s2s="0"
     sweep2sleeponlyon
     ;;
 esac
@@ -35,14 +34,14 @@ esac
 val=$(cat /tmp/aroma-data/tap.prop | cut -d"=" -f2)
 case $val in
   1)
-    #disabled
-    dt2w="0"
-    tap2wakeoff
-    ;;
-  2)
     #enabled
     dt2w="1"
     tap2wakeon
+    ;;
+  2)
+    #disabled
+    dt2w="0"
+    tap2wakeoff
     ;;
 esac
 
@@ -50,14 +49,14 @@ esac
 val=$(cat /tmp/aroma-data/pd.prop | cut -d"=" -f2)
 case $val in
   1)
-    #disabled
-    pd="0"
-    pocketdetectoff
-    ;;
-  2)
     #enabled
     pd="1"
     pocketdetecton
+    ;;
+  2)
+    #disabled
+    pd="0"
+    pocketdetectoff
     ;;
 esac
 

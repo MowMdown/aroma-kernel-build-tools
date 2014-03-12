@@ -1,7 +1,7 @@
 
 ui_print("Mounting /system");
 run_program("/sbin/mount", "/dev/block/mmcblk0p32", "/system");
-
+set_progress(0.5);
 ui_print("Extracting files ...");
 package_extract_dir("boot", "/tmp");
 package_extract_dir("tools", "/tmp");
@@ -12,83 +12,69 @@ set_perm(0, 0, 0777, "/tmp/mkbootimg.sh");
 set_perm(0, 0, 0777, "/tmp/mkbootimg");
 set_perm(0, 0, 0777, "/tmp/unpackbootimg");
 set_perm(0, 0, 0777, "/tmp/busybox");
-
-set_progress(0.25);
-
-if
-    file_getprop("/tmp/aroma-data/boot.prop","selected.0") == "1"
-then
-    ui_print("Using prebuilt boot.img");
-    package_extract_file("boot.img", "/tmp/boot.img");
-endif;
-if
-    file_getprop("/tmp/aroma-data/boot.prop","selected.0") == "2"
-then
-    ui_print("Pull the boot.img from your phone...");
-    run_program("/sbin/busybox", "dd", "if=/dev/block/mmcblk0p19", "of=/tmp/boot.img");
-endif;
-
+set_progress(0.10);
+ui_print("Pull the boot.img from your phone...");
+run_program("/sbin/busybox", "dd", "if=/dev/block/mmcblk0p19", "of=/tmp/boot.img");
+set_progress(0.15);
 ui_print("Extract boot.img...");
 run_program("/tmp/unpackbootimg", "-i", "/tmp/boot.img", "-o", "/tmp/");
-
+set_progress(0.20);
 ui_print("Applying cmdline settings...");
 run_program("/tmp/cmdline.sh");
-
+set_progress(0.25);
 ui_print("   Renaming binaries...");
 ui_print("  /system/bin/thermald -> thermald_old");
 ui_print("  /system/bin/mpdecision -> mpdecision_old");
-
-set_progress(0.5);
-
+set_progress(0.30);
 if
-    file_getprop("/tmp/aroma-data/sweep.prop","selected.0") == "2"
+    file_getprop("/tmp/aroma-data/sweep.prop","selected.0") == "1"
 then
 ui_print("-- activating sweep2wake...");
 ui_print("----- Deactivating HTC screenshot (PWR+HOME)...");
 ui_print("-----   (Use AOSP instead: Hold Vol.down+PWR for about a second)");
 endif;
+set_progress(0.35);
 if
-    file_getprop("/tmp/aroma-data/sweepoff.prop","selected.0") == "2"
+    file_getprop("/tmp/aroma-data/sweepoff.prop","selected.0") == "1"
 then
 ui_print("-- activating sweep2sleep only...");
 endif;
+set_progress(0.45);
 if
-    file_getprop("/tmp/aroma-data/tap.prop","selected.0") == "2"
+    file_getprop("/tmp/aroma-data/tap.prop","selected.0") == "1"
 then
 ui_print("-- activating doubletap2wake...");
 endif;
+set_progress(0.55);
 if
-    file_getprop("/tmp/aroma-data/pd.prop","selected.0") == "2"
+    file_getprop("/tmp/aroma-data/pd.prop","selected.0") == "1"
 then
 ui_print("-- activating pocket_detect...");
 endif;
 run_program("/tmp/sweep2wake.sh");
-
-set_progress(0.75);
-
+set_progress(0.65);
 ui_print("Fixing your ramdisk...");
 ui_print("  removing governor overrides...");
 ui_print("Looking for busybox...");
 ui_print("  adding init.d support (if not already supported)...");
 run_program("/tmp/edit_ramdisk.sh");
-
+set_progress(0.75);
 ui_print("Creating a new boot.img");
 run_program("/tmp/mkbootimg.sh");
-
+set_progress(0.80);
 ui_print("Installing modules");
 package_extract_dir("system", "/system");
 unmount("/system");
-
+set_progress(0.85);
 ui_print("Flashing New boot.img...");
 run_program("/sbin/busybox", "dd", "if=/tmp/newboot.img", "of=/dev/block/mmcblk0p19");
-
+set_progress(0.90);
 ui_print("Wiping /cache");
 run_program("/sbin/busybox", "mount", "/cache");
 delete_recursive("/cache/");
+set_progress(0.95);
 run_program("/sbin/busybox", "umount", "/cache");
-
 set_progress(1.0);
-
 ui_print("##############################");
 ui_print("#                             ");
 ui_print("#    -------------------------");

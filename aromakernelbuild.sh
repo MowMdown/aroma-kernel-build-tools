@@ -89,12 +89,6 @@ else
     abootimg --create $UPDATE_ROOT/boot.img -k arch/arm/boot/zImage -f $LOCAL_BUILD_DIR/bootimg.cfg -r $INITRD
 fi
 
-if [ -e $LOCAL_BUILD_DIR/boot.img ]
-then
-    mkdir -p $LOCAL_BUILD_DIR
-    cp $LOCAL_BUILD_DIR/boot.img $UPDATE_ROOT
-fi
-
 if [ -e $LOCAL_BUILD_DIR/system ]
 then
     mkdir -p $LOCAL_BUILD_DIR

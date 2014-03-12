@@ -136,9 +136,11 @@ else
       "minkhz.prop",
 
 	  "Cpu min Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "189 mhz",        "Min Clock set to 189 mhz",       1,      #-- selected = 1
-	    "384 mhz",        "Min Clock set to 384 mhz",       0,      #-- selected = 2
-	    "432 mhz",        "Min Clock set to 432 mhz",       0      #-- selected = 3
+	    "162 mhz",        "Min Clock set to 162 mhz",       0,      #-- selected = 1
+            "176 mhz",        "Min Clock set to 176 mhz",       0,      #-- selected = 2
+            "189 mhz",        "Min Clock set to 189 mhz",       1,      #-- selected = 3
+	    "384 mhz",        "Min Clock set to 384 mhz",       0,      #-- selected = 4
+	    "432 mhz",        "Min Clock set to 432 mhz",       0      #-- selected = 5
 
   );
 endif;
@@ -159,7 +161,7 @@ else
 	    "550 mhz",        "3d Gpu clock set at 550mhz HIGH OVERCLOCK",       0,      #-- selected = 1
 	    "500 mhz",        "3d Gpu clock set at 500mhz HIGH OVERCLOCK",       0,      #-- selected = 2
 	    "400 mhz",        "3d Gpu clock set at 400mhz",        1,      #-- selected = 3
-            "300 mhz",        "3d Gpu clock set at 300mhz",        0,      #-- selected = 4
+            "320 mhz",        "3d Gpu clock set at 320mhz",        0,      #-- selected = 4
             "266 mhz",        "3d Gpu clock set at 266mhz",        0       #-- selected = 5
 
   );
@@ -190,8 +192,8 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "sweep.prop",
-  "Disabled","",0,
-  "Sweep2Wake","Default",1
+  "Enabled","",1,
+  "Disabled","",0
 );
 
 selectbox(
@@ -199,8 +201,8 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "sweepoff.prop",
-  "Disabled","Default",1,
-  "Enabled","",0
+  "Enabled","",0,
+  "Disabled","",1
 );
 
 selectbox(
@@ -208,36 +210,17 @@ selectbox(
   "Please Select:",
   "icons/personalize",
   "tap.prop",
-  "Disabled","",0,
-  "Enabled","Default",1
+  "Enabled","",1,
+  "Disabled","",0
 );
 
 selectbox(
   "POCKET_DETECT: CONFIG",
-  "We Recommend that you leave this enabled!",
+  "Please Select:",
   "icons/personalize",
   "pd.prop",
-  "Disabled","",0,
-  "Pocket Detect","Default",1
-);
-
-alert (
- "** INFORMATION **",
- "The prebuilt boot.img is a good idea to use if you are upgrading from a\n"+
- "previous kernel version by either Zarboz or .torrented\n"+
- "However if you experience ROM issues replace the prebuilt boot.img in this zip\n"+
- "with the one from your ROM and flash again",
- "icons/alert",
- "OK"
- );
-
-selectbox(
-  "BOOT.IMG: CONFIG",
-  "Warning Not Using Prebuilt boot.img may cause issues!",
-  "icons/personalize",
-  "boot.prop",
-  "Use","Uses prebuilt boot.img",1,
-  "Do Not Use","Does not use prebuilt boot.img",0
+  "Enabled","Recommended",1,
+  "Disabled","",0
 );
 
 ini_set("text_next", "Install Now");

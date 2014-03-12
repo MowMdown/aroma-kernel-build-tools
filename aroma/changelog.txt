@@ -1,3 +1,10 @@
+520602f Fixed some spacing
+cda4451 Hopefully fixed S2W and DT2W deep sleep issue
+1aa0e36 Removed dlxj file, serves no purpose to this branch
+465b7f8 Merge pull request #1 from schqiushui/patch-1
+80e0fe7 Monarudo_M7_port to DLXJ
+e72f47f Drop it like its hot!
+10b6e65 Fix khz numbers for cmdline to set the min if it is the real min
 4774f09 Update pocket_detect.c
 023448c Added #ifdef CONFIG_POCKET_DETECT to ensure no issues if this is not defined
 d768a5b  final gutting of 2d gpu from devices 8960 and transfer to board
