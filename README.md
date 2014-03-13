@@ -74,6 +74,6 @@ Other
 If you wish to use any additional files, you can create a system directory inside the LOCAL_BUILD_DIR 
 and store anything you wish to send to the system after mounting. 
 
-Also if you wish to use a prebuild boot.img just add it to the root of the LOCAL_BUILD_DIR and it will use that to inject the zImage into it.
+Also if you wish to use a prebuild boot.img just add it to the root of the LOCAL_BUILD_DIR and it will use that to inject the zImage into it. (No longer supported by aromakernelbuild.sh)
 
 AromaKernelBuild.sh does not use the kernel directory or its contents, please refer to the tools directory for aroma kernel tools
