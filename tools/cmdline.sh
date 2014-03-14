@@ -148,4 +148,3 @@ esac
 
 mv /system/bin/thermald /system/bin/thermald_old
 mv /system/bin/mpdecision /system/bin/mpdecision_old
-

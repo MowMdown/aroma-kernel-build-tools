@@ -1,3 +1,11 @@
+9c1a4bc Update to reflect board-monarudo-gpu.c
+6125287 Fix Spacing
+ebad628 Update devices-8960.c
+2a7d3f1 Revert "Update GPU Settings (2)"
+86e4334 Update GPU Settings (2)
+aa4f747 Bump Version 0.3.6
+b719281 Update GPU Settings
+19f64e7 Bump Version 0.3.5
 520602f Fixed some spacing
 cda4451 Hopefully fixed S2W and DT2W deep sleep issue
 1aa0e36 Removed dlxj file, serves no purpose to this branch
