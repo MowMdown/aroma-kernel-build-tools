@@ -84,7 +84,7 @@ esac
 
 #clean cmdline from foreigns. failsafe
 #needed since some cmdlines are full of rubbish :)
-sed -i 's/no_console_suspend=1[^$]*$/no_console_suspend=1/g' /tmp/boot.img-cmdline
+sed -i 's/user_debug=31[^$]*$/user_debug=31/g' /tmp/boot.img-cmdline
 
 #Add maxkhz to the kernels cmdline.
 cmdline=$(cat /tmp/boot.img-cmdline)
