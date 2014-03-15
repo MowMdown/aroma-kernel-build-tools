@@ -1,3 +1,6 @@
+c9bc7ba Updated s2w to rename s2s cmdline to s2sonly
+cfee663 Revert "Updated s2w/dt2w/pd"
+4df9093 Updated s2w/dt2w/pd
 9c1a4bc Update to reflect board-monarudo-gpu.c
 6125287 Fix Spacing
 ebad628 Update devices-8960.c
