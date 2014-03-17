@@ -19,7 +19,7 @@ ini_set("rom_name",             "Beastmode Viverrine");
 ini_set("rom_version",          "Blackout_KITKAT");
 ini_set("rom_author",           ".torrented");
 ini_set("rom_device",           "Droid DNA VZW Branded");
-ini_set("rom_date",             "Mar, 02 2014");
+ini_set("rom_date",             "Mar, 16 2014");
 
 splash(
     2000,
@@ -27,7 +27,7 @@ splash(
 );
 
 fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
-  theme("sense");
+  theme("venom_sense5");
   
 calibrate(
 "1.2868","92","1.3144","56","yes"
@@ -52,12 +52,12 @@ viewbox(
 );
 
 agreebox(
-    "<~Terms And Conditions>",
-    "<~Terms>",
-    "@license",
-    resread("terms.txt"),
-    "<~Agree>",
-    "<~You didn't agree to the terms>"
+  "Terms Of Use",
+  "Please read the The Terms of Use ...",
+  "icons/agreement",
+  resread("terms.txt"),
+  "I Agree with the Terms Of Use...",
+  "Please check the agreement..."
 );
 
 textbox(
@@ -68,13 +68,12 @@ textbox(
 );
 
 textbox(
-    "<~Git Log>",
-        "<~Git log>",
-  "@update",
-    resread("changelog.txt")
+  "Changelog",
+  "Beastmode Changelog",
+  "icons/info",
+ resread("changelog.txt")
 );
 
-loadlang("langs/en.lang");
 fontresload( "0", "ttf/Roboto-Regular.ttf", "12" );
 fontresload( "1", "ttf/Roboto-Regular.ttf", "18" );
 
@@ -233,9 +232,7 @@ viewbox(
     "@install"
 );
 
-ini_set("text_next", "Next >");
-
-restotmp("exec_demo/sleep","sleep");
+ini_set("text_next", "Next");
 
 setvar("retstatus",
   install(
