@@ -1,3 +1,9 @@
+9ac7507 Update Monarudo GPU Settings
+c256027 Merge branch 'torrented' of github.com:zarboz/Monarudo_M7_port into torrented
+54fe58b Bump Version 0.3.8
+5989799 Enabled bluetooth controller
+0f95fc3 Add Blink_Buttons cmdline settings
+1060fd5 Update pocket_detect.c
 359ad4f Bump Version 0.3.7
 c9bc7ba Updated s2w to rename s2s cmdline to s2sonly
 cfee663 Revert "Updated s2w/dt2w/pd"
@@ -155,7 +161,7 @@ bdcfe10 revert hacks for the previous misuse of __cpuinit for hotplug only funct
 36b7734 kbuild: drop cpuinit/cpuexit checks in modpost
 4d39644 cpuinit: turn __cpuinit into nops
 9c5abdb cpuinit: get rid of __cpuinit, manual fixups
-371b16dd9 cpuinit: get rid of __cpuinit, sixth regexp
+371b16d cpuinit: get rid of __cpuinit, sixth regexp
 c541a00 cpuinit: get rid of __cpuinit, fifth regexp
 de742bc cpuinit: get rid of __cpuinit, fourth regexp
 6af1122 cpuinit: get rid of __cpuinit, third regexp

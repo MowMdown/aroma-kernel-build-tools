@@ -222,6 +222,15 @@ selectbox(
   "Disabled","",0
 );
 
+selectbox(
+  "BLINK_BUTTONS: CONFIG",
+  "Please Select:",
+  "icons/personalize",
+  "blink.prop",
+  "Enabled","Default",1,
+  "Disabled","",0
+);
+
 ini_set("text_next", "Install Now");
 
 viewbox(
