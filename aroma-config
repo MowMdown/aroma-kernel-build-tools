@@ -15,15 +15,15 @@
 # limitations under the License.
 #
 
-ini_set("rom_name",             "Beastmode Viverrine");
-ini_set("rom_version",          "Blackout_KITKAT");
-ini_set("rom_author",           ".torrented");
+ini_set("rom_name",             "iHate Kernel");
+ini_set("rom_version",          "iHate_KITKAT");
+ini_set("rom_author",           ".torrented | iHateWebOS");
 ini_set("rom_device",           "Droid DNA VZW Branded");
-ini_set("rom_date",             "Mar, 16 2014");
+ini_set("rom_date",             "May, 12 2014");
 
 splash(
     2000,
-    "logo"
+    "splash/a1"
 );
 
 fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansFallback.ttf;", "12" ); #-- Use sets of font (Font Family)
@@ -32,8 +32,9 @@ fontresload( "0", "ttf/Roboto-Regular.ttf;ttf/DroidSansArabic.ttf;ttf/DroidSansF
 calibrate(
 "1.2868","92","1.3144","56","yes"
 );
+
 viewbox(
-    "<~Beastmode Viverrine>",
+    "<~iHate Kernel>",
   
     "<~Thanks for trying> <b>"+
 	  #-- Get Config Value
@@ -43,7 +44,7 @@ viewbox(
     "<~Feel free to proceed>\n\n"+
 	
       "  <~Version>\t: <b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
-      "  <~Project>\t: <b><#selectbg_g>Viverrine</#></b>\n"+
+      "  <~Project>\t: <b><#selectbg_g>iHate Sense</#></b>\n"+
       "  <~Last updated>\t: <b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n\n"+
 
     "<~Proceed>",
@@ -101,22 +102,19 @@ alert (
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
-	  "maxkhz.prop",
-	  "selected=1\n"    #-- Default CPU Clock at 1.5ghz
+	  "sweep.prop",
+	  "selected=2\n"    #-- Sweep2Wake Off
   );
 else
   selectbox(
-      "CPU Speeds",
-      "Please select The Max cpu Speed:",
+      "Sweep2Wake",
+      "Please select Sweep2Wake Settings:",
       "@default",
-      "maxkhz.prop",
+      "sweep.prop",
 
-	  "Cpu max Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "1.51 ghz",        "Max Clock set to 1.51ghz",       1,      #-- selected = 1
-	    "1.56 ghz",        "Max Clock set to 1.56ghz",       0,      #-- selected = 2
-	    "1.67 ghz",        "Max Clock set to 1.67ghz",       0,      #-- selected = 3
-	    "1.73 ghz",        "Max Clock set to 1.73ghz",       0,      #-- selected = 4
-	    "1.78 ghz",        "Max Clock set to 1.78ghz",       0      #-- selected = 5
+	  "Sweep2Wake",        "",             2,      #-- Group 1. key = "selected"
+	    "On",         "Recommended",       0,      #-- selected = 1
+	    "Off",        "Default",           1       #-- selected = 2
 	    
 
   );
@@ -124,112 +122,63 @@ endif;
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
-	  "minkhz.prop",
-	  "selected=2\n"    #-- Default CPU Clock at 1.5ghz
+	  "sweepoff.prop",
+	  "selected=2\n"    #-- Sweep2Sleep Only Off
   );
 else
   selectbox(
-      "CPU Speeds",
-      "Please select The Min cpu Speed:",
+      "Sweep2Sleep Only",
+      "Please select Sweep2Sleep Only Settings:",
       "@default",
-      "minkhz.prop",
+      "sweepoff.prop",
 
-	  "Cpu min Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "162 mhz",        "Min Clock set to 162 mhz",       0,      #-- selected = 1
-            "176 mhz",        "Min Clock set to 176 mhz",       0,      #-- selected = 2
-            "189 mhz",        "Min Clock set to 189 mhz",       1,      #-- selected = 3
-	    "384 mhz",        "Min Clock set to 384 mhz",       0,      #-- selected = 4
-	    "432 mhz",        "Min Clock set to 432 mhz",       0      #-- selected = 5
+	  "Sweep2Sleep Only",     "",          2,      #-- Group 1. key = "selected"
+	    "On",         "Recommended",       0,      #-- selected = 1
+	    "Off",        "Default",           1       #-- selected = 2
+	    
 
   );
 endif;
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
-	  "3dgpu.prop",
-	  "selected=3\n"    #-- Default 3d GPU Clock of 450mhz
+	  "tap.prop",
+	  "selected=2\n"    #-- DoubleTap2Wake Off
   );
 else
   selectbox(
-      "GPU Speeds",
-      "Please select The 3D Gpu Speed:",
+      "DoubleTap2Wake",
+      "Please select DoubleTap2Wake Settings:",
       "@default",
-      "3dgpu.prop",
+      "tap.prop",
 
-	  "3d Gpu Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "550 mhz",        "3d Gpu clock set at 550mhz HIGH OVERCLOCK",       0,      #-- selected = 1
-	    "500 mhz",        "3d Gpu clock set at 500mhz HIGH OVERCLOCK",       0,      #-- selected = 2
-	    "400 mhz",        "3d Gpu clock set at 400mhz",        1,      #-- selected = 3
-            "320 mhz",        "3d Gpu clock set at 320mhz",        0,      #-- selected = 4
-            "266 mhz",        "3d Gpu clock set at 266mhz",        0       #-- selected = 5
+	  "DoubleTap2Wake",        "",         2,      #-- Group 1. key = "selected"
+	    "On",         "Recommended",       0,      #-- selected = 1
+	    "Off",        "Default",           1       #-- selected = 2
+	    
 
   );
 endif;
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
-	  "2dgpu.prop",
-	  "selected=2\n"    #-- Default 2d GPU Clock of 266mhz
+	  "pd.prop",
+	  "selected=2\n"    #-- PocketDetect Off
   );
 else
   selectbox(
-      "GPU Speeds",
-      "Please select The 2D Gpu Speed:",
+      "Pocket Detect",
+      "Please select Pocket Detect Settings:",
       "@default",
-      "2dgpu.prop",
+      "pd.prop",
 
-	  "2d Gpu Speed",                "",                      2,  #-- Group 1. key = "selected"
-	    "300 mhz",        "2d Gpu clock set at 300mhz",       0,      #-- selected = 1
-	    "266 mhz",        "2d Gpu clock set at 266mhz",       1,      #-- selected = 2
-	    "200 mhz",        "2d Gpu clock set at 200mhz",       0       #-- selected = 3
+	  "Pocket Detect",        "",          2,  #-- Group 1. key = "selected"
+	    "On",         "Recommended",       1,      #-- selected = 1
+	    "Off",        "Default",           0       #-- selected = 2
+	    
 
   );
 endif;
-
-selectbox(
-  "SWEEP2WAKE: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "sweep.prop",
-  "Enabled","",1,
-  "Disabled","",0
-);
-
-selectbox(
-  "SWEEP2SLEEPONLY: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "sweepoff.prop",
-  "Enabled","",0,
-  "Disabled","",1
-);
-
-selectbox(
-  "DOUBLETAP2WAKE: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "tap.prop",
-  "Enabled","",1,
-  "Disabled","",0
-);
-
-selectbox(
-  "POCKET_DETECT: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "pd.prop",
-  "Enabled","Recommended",1,
-  "Disabled","",0
-);
-
-selectbox(
-  "BLINK_BUTTONS: CONFIG",
-  "Please Select:",
-  "icons/personalize",
-  "blink.prop",
-  "Enabled","Default",1,
-  "Disabled","",0
-);
 
 ini_set("text_next", "Install Now");
 

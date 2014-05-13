@@ -60,21 +60,6 @@ case $val in
     ;;
 esac
 
-#get blink_buttons setting
-val=$(cat /tmp/aroma-data/blink.prop | cut -d"=" -f2)
-case $val in
-  1)
-    #enabled
-    blink_buttons="1"
-    blinkbuttonson
-    ;;
-  2)
-    #disabled
-    blink_buttons="0"
-    blinkbuttonsoff
-    ;;
-esac
-
 cmdline=$(cat /tmp/boot.img-cmdline)
 searchString="s2w="
 s2w="s2w="$s2w
@@ -121,17 +106,5 @@ case $cmdline in
 	;;  
   *)
 	echo $(cat /tmp/boot.img-cmdline)\ $pd>/tmp/boot.img-cmdline
-	;;
-esac
-cmdline=$(cat /tmp/boot.img-cmdline)
-searchString="blink_buttons="
-blink_buttons="blink_buttons="$blink_buttons
-case $cmdline in
-  "$searchString"* | *" $searchString"*)
-   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/blink_buttons=[^ ]\+//')>/tmp/boot.img-cmdline
-	echo $(cat /tmp/boot.img-cmdline)\ $blink_buttons>/tmp/boot.img-cmdline
-	;;  
-  *)
-	echo $(cat /tmp/boot.img-cmdline)\ $blink_buttons>/tmp/boot.img-cmdline
 	;;
 esac
