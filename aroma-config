@@ -102,6 +102,49 @@ alert (
 
 if (prop("type.prop","selected")=="1") then
   writetmpfile(
+	  "maxkhz.prop",
+	  "selected=1\n"    #-- Default CPU Clock at 1.5ghz
+  );
+else
+  selectbox(
+      "CPU Speeds",
+      "Please select The Max cpu Speed:",
+      "@default",
+      "maxkhz.prop",
+
+	  "Cpu max Speed",                "",                    2,      #-- Group 1. key = "selected"
+	    "1.51 ghz",        "Max Clock set to 1.51ghz",       1,      #-- selected = 1
+	    "1.67 ghz",        "Max Clock set to 1.67ghz",       0,      #-- selected = 2
+	    "1.73 ghz",        "Max Clock set to 1.73ghz",       0       #-- selected = 3
+
+
+  );
+endif;
+
+if (prop("type.prop","selected")=="1") then
+  writetmpfile(
+	  "minkhz.prop",
+	  "selected=4\n"    #-- Default Min CPU Clock at 384mhz
+  );
+else
+  selectbox(
+      "CPU Speeds",
+      "Please select The Min cpu Speed:",
+      "@default",
+      "minkhz.prop",
+
+	  "Cpu min Speed",                "",                   2,      #-- Group 1. key = "selected"
+	    "162 mhz",        "Min Clock set to 162 mhz",       0,      #-- selected = 1
+            "270 mhz",        "Min Clock set to 270 mhz",       0,      #-- selected = 2
+            "378 mhz",        "Min Clock set to 378 mhz",       0,      #-- selected = 3
+	    "384 mhz",        "Min Clock set to 384 mhz",       1,      #-- selected = 4
+	    "486 mhz",        "Min Clock set to 486 mhz",       0       #-- selected = 5
+
+  );
+endif;
+
+if (prop("type.prop","selected")=="1") then
+  writetmpfile(
 	  "sweep.prop",
 	  "selected=2\n"    #-- Sweep2Wake Off
   );
@@ -173,8 +216,8 @@ else
       "pd.prop",
 
 	  "Pocket Detect",        "",          2,  #-- Group 1. key = "selected"
-	    "On",         "Recommended",       1,      #-- selected = 1
-	    "Off",        "Default",           0       #-- selected = 2
+	    "On",         "Recommended",       0,      #-- selected = 1
+	    "Off",        "Default",           1       #-- selected = 2
 	    
 
   );

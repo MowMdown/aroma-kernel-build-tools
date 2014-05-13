@@ -1,1 +1,363 @@
-/home/torrented/Development/kernel/DNA_kitkat
+d863e67 Merge branch 'ihate' of https://github.com/iHateWEBos/DNA_kitkat into ihate
+36cbb56 update defconfig
+1e6c949 initial introduction of cmdline khz
+3cdf371 Update Makefile Derp
+e23d0a8 Merge branch 'ihate' of https://github.com/iHateWEBos/DNA_kitkat into ihate
+3741ff9 xt_socket.c: GCC 4.7 compiler warning fixups
+0160c8b update defconfig
+ef79f55 Random: Squashed: entropy tweaks
+246db5f fix merge derp
+40899a2 introduce preservative governor
+0f35348 revert back to gcc4.8 for compatibility
+94dde65 FS: import F2FS
+c891619 drivers/Makefile: add exFat support
+03f7b33 drivers/exfat: add Samsung's open source exFat module version 1.2.4
+2152080 intelliactive: make touch boost interface generic
+8127425 intelliactive: add upstream patches
+436feac intelliactive: HTC Only Hack
+88be47c intelliactive: fix race condition when unregistering input handlers
+0af2408 intelliactive: tune for APQ8064 devices
+ae0a4fb cpufreq: intelliactive: initial coding and introduction!
+c5a16cd cpufreq: intellidemand: Set MIN_LATENCY_MULTIPLIER to 20
+6f26c68 intellidemand: fix permission for sampling_rate as well
+b70da08 intellidemand: change permission for boostpulse from root to system
+a11b061 intellidemand: change boost tunable scope from global to local
+6fbdb4c intellidemand: allow clean compilation when LMF is disabled
+1fa61a4 arch/arm/mach-msm/cpufreq: remove deprecated logic
+ed7838a msm: cpufreq: make the gov stop part fully atomic
+35d7056 intellidemand: Don't update the policy->cur upon cpufreq driver failure
+13bafc1 intellidemand: remove unused min performance lock defines
+20aa5fa intellidemand: remove eco mode option (replaced by intelli_plug)
+a7e1a82 intellidemand: remove cpu cores autoplug capability (replaced by intelli_plug)
+67bedc2 intellidemand: add default values for dbs sync and optimal tuneables
+4d0a059 cpufreq: enable sibling cpu policy sharing
+f5df1f7 intellidemand: give intellidemand's cpu_dbs_info its own name
+1fc063b intellidemand: Add support to consider other cpu load when scaling frequencies
+ca757ff cpufreq: Avoid using smp_processor_id() in preemptible context
+2e2d77f Intellidemand: adjust the nr_run hysteresis for better UI response
+eb06c14 intellidemand: tweak for not using min performance lock
+a7186e1 intellidemand: add eco mode (dual core operations) bump version to 4.1
+f5a01cc intellidemand: increase boost duration to 2.5 seconds from 1.5
+da02f71 Intellidemand: put cores 1~3 to sleep while screen is off
+7b79067 intellidemand: code derps clean up!
+2863dc8 Intellidemand: update for quadcore operations. bump version to 4.0
+6b97ffe intellidemand: add minimum cpu performance lock
+5abda8c intellidemand: add a run queue persistence to determine browsing state
+0868683 intellidemand: add bug fixes
+8b8556b intellidemand: Add boost pulse capability
+b9bdc2c cpufreq/cpufreq_intellidemand: intellidemand cpufreq governor (version 4.0)
+29e7315 update defconfig
+257253e update defconfig
+7df7fc6 fix pick derp
+746dab4 add unaligned access to makefile
+f035aa4 lib/lzo: Optimize code for CPUs with inefficient unaligned access
+b2fe88f lib/lzo: Update LZO compression to current upstream version
+f584f14 lib/lzo: Rename lzo1x_decompress.c to lzo1x_decompress_safe.c
+43e02ee ARM: 7583/1: decompressor: Enable unaligned memory access for v6 and above
+caef6da hrtimer: Prevent enqueue of hrtimer on dead CPU
+2e988de hrtimer: Consider preemption when migrating hrtimer cpu_bases
+60fa87c mutex: back out architecture specific check for negative mutex count
+3aecd49 mutex: Queue mutex spinners with MCS lock to reduce cacheline contention
+18c5e66 mutex: Make more scalable by doing less atomic operations
+6ce100a Implement kexec-hardboot
+4ab680f timekeeping: Fix time moving backwards
+ab5c3f7 arm: vfpmodule: Fix warning procfs vfp_bounce reporting failed
+b0180b5 ARM: only allow kernel mode neon with AEABI
+384090d ARM: 7835/2: fix modular build of xor_blocks() with NEON enabled
+557b8ad ARM: crypto: add NEON accelerated XOR implementation
+a4e5d05 ARM: add support for kernel mode NEON
+c639845 ARM: move VFP init to an earlier boot stage
+90180e0 update defconfig
+5d718cf SCHED: LOAD_FREQ (4*HZ+61) avoids loadavg Moire
+65d521a fix up makefiles for new toolchain
+47f4b9c increase bus freq at lowest GPU freq
+bdc0c5e ARM: 7670/1: fix the memset fix
+52da476 ARM: 7668/1: fix memset-related crashes caused by recent GCC (4.7.2) optimizations
+15c9820 initial gcc 4.8 fix-ups
+3d38286 enable gentle fair sleepers.... battery life took a bigger hit then id like.  boosted benchmarks a few points, but didnt make the device feel any snappier.
+f5c7e85 update defconfig
+d2a712e disable gentle fair sleepers
+4174d33 Revert "DRIVERS: SLIMBUS: some more tweaks:"
+7b1589e Revert "fix-up poons commits"
+7ff3d5d Revert "slimbus: fix-up 2:"
+9c47600 slimbus: fix-up 2: forgot to change these values as well
+1fdd99d fix-up poons commits backwards port to dna's stock slimbus driver
+e98fcd9 DRIVERS: SLIMBUS: some more tweaks:
+a62851a fix merge error
+6915806 update defconfig
+4dcd5e9 msm_thermal: New thermal driver
+bf486c3 Sound Control: Added headphone poweramp controls
+3c071eb Sound Control: Updated for HTC One (m7)
+6772afc Sound Control: Sound control for WCD93xx codec
+0d25bda cpuidle: Get typical recent sleep interval
+573e7f1 cpuidle: Quickly notice prediction failure in general case
+d2cd6a8 cpuidle: Quickly notice prediction failure for repeat mode
+024de75 cpuidle: move field disable from per-driver to per-cpu
+9c830c2 Add Graphics boost
+a701cf4 update defconfig
+c491a86 ARM CPU Topology and cpu_power driver
+b964b7f make kcal compatible with other apps
+e65aa57 update defconfig
+288e38e keep ondemand stockish
+44056be msm_kcal_ctrl: generic MSM LCD temperature calibrations
+dfa0399 cpufreq: ondemand: adjust min input event freq and moar.
+3f4f827 performance tune ondemand governor
+e482c9c Revert "add gboost to ondemand"
+7123de1 nohz: Reduce overhead under high-freq idling patterns
+3071e17 update defconfig with recently added features
+582e692 msm: timer: Use 32768Hz GPT and SCLK on 8064 family
+8d6252d EHCI: HSIC: Add support to vote for SVS digital voltage
+05da733 sched: reinitialize rq->next_balance when a CPU is hot-added Reinitialize rq->next_balance when a CPU is hot-added.  Otherwise, scheduler domain rebalancing may be skipped if rq->next_balance was set to a future time when the CPU was last active, and the newly-re-added CPU is in idle_balance().  As a result, the newly-re-added CPU will remain idle with no tasks scheduled until the softlockup watchdog runs - potentially 4 seconds later.  This can waste energy and reduce performance.
+457d8ee add Simple I/O scheduler
+e99002a enable uaccess with memcpy
+892bf43 squashed: glibc versions:
+2ed00f3 define freq table size
+3937cb3 add "-" to local version
+3edd7d1 fix up voltages ect: lower min voltages and do a final clean-up of acpuclock
+9c779b6 build-fix: the cherry-pick i used didnt add this for some reason.....
+26b627e add local version to defconfig
+afe717f fix-ups: update defconfig and add bfq hooks
+b1176d7 DRIVERS: SLIMBUS: slimbus enhancements mkII
+4d5e44d block, bfq: add Early Queue Merge (EQM) to BFQ-v7r3 for 3.4.0
+791cb94 block: introduce the BFQ-v7r3 I/O sched for 3.4
+c0b350a Revert "block: bfq: introduce the BFQ-v7r2 I/O sched for 3.4"
+683aed8 more voltage tweaks
+c06c95a add gboost to ondemand i got it from flar2
+9ff465e back to two-phase just not as smooth as two phase
+97d4e8f chaaaanges: switch ondemand from two phase to multi phase update 8064.c to use the same frequency table from the ported m7 kernel
+b6a16af adjust voltages
+f687bc0 update local version
+526acfb fix-ups: added ccache and cleaned up cpufreq.c as found on jamiethemorris github.
+cd4e450 msm_cpufreq: setting default boot min/max frequencies
+abd78de update defconfig with recently added features and push l2 for max clocks to 16
+020e478 final clean-up of acpuclock-8064 its silly to remove slow binned cpu's ability to overclock instead of setting boot frequency to stock.
+f8738ac Frandom a fast pseudo-random number generator
+f04e62b block: bfq: introduce the BFQ-v7r2 I/O sched for 3.4
+0dd00a9 Scripts: remove plus sign from local version
+f980fab clean up synaptics:
+445f857 cpufreq: Retain only online cpus in managed_policy->cpus
+42bca25 SQUASHED: msm: rq_stat hotplug attribute
+5f50b2f msm: rq_stats: Fix missing initalization of cur_freq
+bc5f864 TEST: enable stock frequency limiter controls frequency based on cpu's binning
+e8813f3 Mach:MSM:Krait: clean-ups clean up acpuclock- krait and 8064 of erroneous changes and prepare tables for testing out the stock ACPU_CUSTOM_FREQ_SUPPORT feature.
+6c94464 usb: gadget: mass_storage: added sysfs entry for cdrom to LUNs
+ff83e3b cpufreq: ondemand: Boost CPU frequency only for touch input
+2d4761d [PATCH] disable QCE QCE is supposed to increase efficiency by using  the hardware acceleration for cyrpto functions. Instead, it increased battery  drain by about 1% per hour during sleep.
+956efb7 Stats: clean up freq stat details
+a2d8d72 chips: cm3629 fix squash derp fix pocket detect
+41ddbb9 personalize compiler host name
+f1f123e update defconfig
+6361d96 squashed: screen wake patches sweep2wake sweep2sleep doubletap2wake pocket detect
+2bf2f15 turn down swapiness
+d4039a0 update defconfig
+c271dbf build fix fix my derpness
+646c318 frontswap: support exclusive gets if tmem backend is capable
+ba1c274 mm: frontswap: fix a wrong if condition in frontswap_shrink
+6634394 mm/frontswap: fix uninit'ed variable warning
+a50b733 mm/frontswap: cleanup doc and comment error
+52aa460 mm: frontswap: remove unneeded headers
+22b15e5 mm: frontswap: split out function to clear a page out
+ccb85c4 mm: frontswap: remove unnecessary check during initialization
+ab23fc3 mm: frontswap: make all branches of if statement in put page consistent
+8487e23 mm: frontswap: split frontswap_shrink further to simplify locking
+c8e6e11 mm: frontswap: split out __frontswap_unuse_pages
+f237c1a mm: frontswap: split out __frontswap_curr_pages
+51aa0b0 mm: frontswap: trivial coding convention issues
+78cabd3 mm: frontswap: remove casting from function calls through ops structure
+9df4da0 SCHEDULER: Autogroup patch group by current user android UID instead of task ID
+0b26438 frontswap: s/put_page/store/g s/get_page/load
+62e1124 mm: frontswap: config and doc files
+ea7d1a8 mm: frontswap: core frontswap functionality
+9060e23 mm: frontswap: core swap subsystem hooks and headers
+3819707 mm: frontswap: add frontswap header file
+7e9d271 cpufreq: Resolve CPUFREQ_NOTIFY issue
+feef173 block: Add support for reinsert a dispatched req Date Tue, 11 Dec 2012 15:36:54 +0200
+fb61dc8 block: fiops add some trace information
+22c361f block: fiops bias sync workload
+b884a4e block: fiops preserve vios key for deep queue depth workload
+5731d85 block: fiops add ioprio support
+145109f block: fiops sync/async scale
+e0f7dca block: fiops read/write request scale
+5c8a4b4 block: fiops ioscheduler core
+0646b16 various sound hax overclock slimbus hack Beats audio to be on always increase audio Gain
+5127401 update defconfig: turned on conservative governor added TCP control enabled earlysuspend cpu boost enabled HTC's ksm page checker
+08283ab Revert "ksm: check and skip page, if it is already scanned"
+b7dda6b Revert "build fix"
+d6ca86d build fix derped up mah last cherry-pick yo
+f7ac514 ksm: check and skip page, if it is already scanned
+a291e67 ext4: fix memory leak in xattr
+3db4e67 cpufreq: Save user policy min/max instead of policy min/max during hotplug
+5631027 softirq: reduce latencies
+85f597b writeback: fix occasional slow sync(1)
+8315618 SELinux: include definition of new capabilities
+6d96892 CHROMIUM: mm: Fix calculation of dirtyable memory
+1f65303 sched/rt: Remove redundant nr_cpus_allowed test
+b77a079 fix-up quad stats to work with the DNA
+e12b1ee clean ups: delete some old patch file and enable cpu stats by default.
+c3fa12f overall_stats: add overall stats for all available cores
+c22b212 Force AC charge mode at will
+f49745f update defconfig
+2545370 fs/dyn_sync_cntrl: dynamic sync control
+e37ef53 various build-fixes
+7113af3 Makefile: add toolchain path i do this to frustrate people
+2a75e88 initial overclock
+142e946 Voltage Control: initial voltage control for MSM S4-Pro SOC
+046b10d update defconfig
+a9e1014 update defconfig
+7078177 fix pick derp
+3940607 add unaligned access to makefile
+5799ad4 lib/lzo: Optimize code for CPUs with inefficient unaligned access
+c61265e lib/lzo: Update LZO compression to current upstream version
+936e7dc lib/lzo: Rename lzo1x_decompress.c to lzo1x_decompress_safe.c
+feb00b5 ARM: 7583/1: decompressor: Enable unaligned memory access for v6 and above
+d1e10ef hrtimer: Prevent enqueue of hrtimer on dead CPU
+900e0a6 hrtimer: Consider preemption when migrating hrtimer cpu_bases
+8c1f12f mutex: back out architecture specific check for negative mutex count
+5b19e25 mutex: Queue mutex spinners with MCS lock to reduce cacheline contention
+280adf7 mutex: Make more scalable by doing less atomic operations
+f499957 Implement kexec-hardboot
+38b8a8d timekeeping: Fix time moving backwards
+c076da4 arm: vfpmodule: Fix warning procfs vfp_bounce reporting failed
+c6d259e ARM: only allow kernel mode neon with AEABI
+ef0363a ARM: 7835/2: fix modular build of xor_blocks() with NEON enabled
+541db84 ARM: crypto: add NEON accelerated XOR implementation
+8845cf8 ARM: add support for kernel mode NEON
+69ce62b ARM: move VFP init to an earlier boot stage
+b4ced8d update defconfig
+28a4bc9 SCHED: LOAD_FREQ (4*HZ+61) avoids loadavg Moire
+5a66de0 fix up makefiles for new toolchain
+1036db6 increase bus freq at lowest GPU freq
+0d57443 ARM: 7670/1: fix the memset fix
+9d86b87 ARM: 7668/1: fix memset-related crashes caused by recent GCC (4.7.2) optimizations
+6912308 initial gcc 4.8 fix-ups
+8b5df62 enable gentle fair sleepers.... battery life took a bigger hit then id like.  boosted benchmarks a few points, but didnt make the device feel any snappier.
+df13522 update defconfig
+628bd1b disable gentle fair sleepers
+5c99aed Revert "DRIVERS: SLIMBUS: some more tweaks:"
+d4e498c Revert "fix-up poons commits"
+7d42145 Revert "slimbus: fix-up 2:"
+cea9c0e slimbus: fix-up 2: forgot to change these values as well
+9a07a5f fix-up poons commits backwards port to dna's stock slimbus driver
+b18f301 DRIVERS: SLIMBUS: some more tweaks:
+1069e51 fix merge error
+fc12b4e update defconfig
+5f05d54 msm_thermal: New thermal driver
+8818944 Sound Control: Added headphone poweramp controls
+7e988dd Sound Control: Updated for HTC One (m7)
+73e3ed3 Sound Control: Sound control for WCD93xx codec
+e537337 cpuidle: Get typical recent sleep interval
+332f371 cpuidle: Quickly notice prediction failure in general case
+b5e035b cpuidle: Quickly notice prediction failure for repeat mode
+edc9f0a cpuidle: move field disable from per-driver to per-cpu
+9d60c23 Add Graphics boost
+f718245 update defconfig
+42218c7 ARM CPU Topology and cpu_power driver
+41942b5 make kcal compatible with other apps
+21d5320 update defconfig
+fc297ba keep ondemand stockish
+6b9acd1 msm_kcal_ctrl: generic MSM LCD temperature calibrations
+c37741c cpufreq: ondemand: adjust min input event freq and moar.
+828bf7c performance tune ondemand governor
+2a15c13 Revert "add gboost to ondemand"
+d793ccf nohz: Reduce overhead under high-freq idling patterns
+cece778 update defconfig with recently added features
+e452d09 msm: timer: Use 32768Hz GPT and SCLK on 8064 family
+1f55002 EHCI: HSIC: Add support to vote for SVS digital voltage
+1c06b83 sched: reinitialize rq->next_balance when a CPU is hot-added Reinitialize rq->next_balance when a CPU is hot-added.  Otherwise, scheduler domain rebalancing may be skipped if rq->next_balance was set to a future time when the CPU was last active, and the newly-re-added CPU is in idle_balance().  As a result, the newly-re-added CPU will remain idle with no tasks scheduled until the softlockup watchdog runs - potentially 4 seconds later.  This can waste energy and reduce performance.
+53e003f add Simple I/O scheduler
+2a2eda7 enable uaccess with memcpy
+228485b squashed: glibc versions:
+21d7fe8 define freq table size
+e5bece4 add "-" to local version
+34db17f fix up voltages ect: lower min voltages and do a final clean-up of acpuclock
+0ec6baf build-fix: the cherry-pick i used didnt add this for some reason.....
+ca63ed3 add local version to defconfig
+56c57d4 fix-ups: update defconfig and add bfq hooks
+921edd1 DRIVERS: SLIMBUS: slimbus enhancements mkII
+854dad8 block, bfq: add Early Queue Merge (EQM) to BFQ-v7r3 for 3.4.0
+eaaebe5 block: introduce the BFQ-v7r3 I/O sched for 3.4
+fe3d54c Revert "block: bfq: introduce the BFQ-v7r2 I/O sched for 3.4"
+0c0b740 more voltage tweaks
+c168354 add gboost to ondemand i got it from flar2
+02341c7 back to two-phase just not as smooth as two phase
+aadb609 chaaaanges: switch ondemand from two phase to multi phase update 8064.c to use the same frequency table from the ported m7 kernel
+8bd63c3 adjust voltages
+8485477 update local version
+de1159f fix-ups: added ccache and cleaned up cpufreq.c as found on jamiethemorris github.
+448c92d msm_cpufreq: setting default boot min/max frequencies
+3f7930a update defconfig with recently added features and push l2 for max clocks to 16
+9e6fec1 final clean-up of acpuclock-8064 its silly to remove slow binned cpu's ability to overclock instead of setting boot frequency to stock.
+3bb90a5 Frandom a fast pseudo-random number generator
+a0802da block: bfq: introduce the BFQ-v7r2 I/O sched for 3.4
+2d707d4 Scripts: remove plus sign from local version
+74cbf18 clean up synaptics:
+72a0c36 cpufreq: Retain only online cpus in managed_policy->cpus
+1b1b552 SQUASHED: msm: rq_stat hotplug attribute
+f1761b0 msm: rq_stats: Fix missing initalization of cur_freq
+2bec2bb TEST: enable stock frequency limiter controls frequency based on cpu's binning
+1832919 Mach:MSM:Krait: clean-ups clean up acpuclock- krait and 8064 of erroneous changes and prepare tables for testing out the stock ACPU_CUSTOM_FREQ_SUPPORT feature.
+c9b64f9 usb: gadget: mass_storage: added sysfs entry for cdrom to LUNs
+cd9041a cpufreq: ondemand: Boost CPU frequency only for touch input
+61f57ab [PATCH] disable QCE QCE is supposed to increase efficiency by using  the hardware acceleration for cyrpto functions. Instead, it increased battery  drain by about 1% per hour during sleep.
+dc3fcda Stats: clean up freq stat details
+1bc183b chips: cm3629 fix squash derp fix pocket detect
+690c20e personalize compiler host name
+6057225 update defconfig
+c9efe78 squashed: screen wake patches sweep2wake sweep2sleep doubletap2wake pocket detect
+eabd989 turn down swapiness
+abf2f6e update defconfig
+1cf6087 build fix fix my derpness
+cfe4326 frontswap: support exclusive gets if tmem backend is capable
+3e0a5a7 mm: frontswap: fix a wrong if condition in frontswap_shrink
+ad6b2b9 mm/frontswap: fix uninit'ed variable warning
+39cd1a5 mm/frontswap: cleanup doc and comment error
+84a9402 mm: frontswap: remove unneeded headers
+e769f51 mm: frontswap: split out function to clear a page out
+9dd166e mm: frontswap: remove unnecessary check during initialization
+3300a80 mm: frontswap: make all branches of if statement in put page consistent
+2053e47 mm: frontswap: split frontswap_shrink further to simplify locking
+5f617e4 mm: frontswap: split out __frontswap_unuse_pages
+ae4124a mm: frontswap: split out __frontswap_curr_pages
+cb32fe3 mm: frontswap: trivial coding convention issues
+771da59 mm: frontswap: remove casting from function calls through ops structure
+ec4ba2c SCHEDULER: Autogroup patch group by current user android UID instead of task ID
+ead02d3 frontswap: s/put_page/store/g s/get_page/load
+d3ae8b4 mm: frontswap: config and doc files
+d37927b mm: frontswap: core frontswap functionality
+70f74e3 mm: frontswap: core swap subsystem hooks and headers
+07b9600 mm: frontswap: add frontswap header file
+12c9bc1 cpufreq: Resolve CPUFREQ_NOTIFY issue
+8a1a8e0 block: Add support for reinsert a dispatched req Date Tue, 11 Dec 2012 15:36:54 +0200
+9e7d69d block: fiops add some trace information
+1610351 block: fiops bias sync workload
+c6b362d block: fiops preserve vios key for deep queue depth workload
+4a6204c block: fiops add ioprio support
+f2dd741 block: fiops sync/async scale
+fc53317 block: fiops read/write request scale
+395977c block: fiops ioscheduler core
+eba03c6 various sound hax overclock slimbus hack Beats audio to be on always increase audio Gain
+1de0631 update defconfig: turned on conservative governor added TCP control enabled earlysuspend cpu boost enabled HTC's ksm page checker
+26909ac Revert "ksm: check and skip page, if it is already scanned"
+3a006ff Revert "build fix"
+fa4034d build fix derped up mah last cherry-pick yo
+cf845b5 ksm: check and skip page, if it is already scanned
+0f0db4f ext4: fix memory leak in xattr
+490ba21 cpufreq: Save user policy min/max instead of policy min/max during hotplug
+824d24a softirq: reduce latencies
+bac7e87 writeback: fix occasional slow sync(1)
+cc78fa0 SELinux: include definition of new capabilities
+f8298be CHROMIUM: mm: Fix calculation of dirtyable memory
+cba26f4 sched/rt: Remove redundant nr_cpus_allowed test
+e4d6f13 fix-up quad stats to work with the DNA
+f8728e8 clean ups: delete some old patch file and enable cpu stats by default.
+0669519 overall_stats: add overall stats for all available cores
+bb3f4a2 Force AC charge mode at will
+dab9d3b update defconfig
+6e53487 fs/dyn_sync_cntrl: dynamic sync control
+d1b1e11 various build-fixes
+fff17bd Makefile: add toolchain path i do this to frustrate people
+0823a1e initial overclock
+2de71ea Voltage Control: initial voltage control for MSM S4-Pro SOC
+e596465 create defconfig and add ignore file
+bd87cae gift from HTCdev Android 4.4.2 kernel source for the dlx.
+06c2041 Initial commit
