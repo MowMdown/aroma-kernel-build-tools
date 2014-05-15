@@ -16,9 +16,11 @@ TARGET_DIR=~/path/to/output/dir
 
 SYSTEM_PARTITION="/dev/block/mmcblk0pXX"
 
+BOOT_PARTITION="/dev/block/mmcblk0pXX"
+
 DEFCONFIG=device_defconfig
 
-FLASH_BOOT='write_raw_image("/tmp/boot.img", "boot")'
+FLASH_BOOT='write_raw_image("/tmp/boot.img", "boot")' <-- Optional
 
 N_CORES=4
 
@@ -60,14 +62,6 @@ abootimg
 mkbootimg
 unpackbootimg
 and any other scripts that you want aroma to use
-
-Using Anykernel-build-tools
-===========================
-Use the anykernelbuild.sh
-
-This will build a standard kernel with a non-aroma installer zip, just flash and go!
-
-To use this method, you will need to edit the contents of "anykernel-updater-script" < DO NOT RENAME THIS FILE!!!
 
 Other
 =====
