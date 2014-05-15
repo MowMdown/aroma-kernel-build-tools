@@ -33,16 +33,22 @@ else
 fi
 
 msg Building: $VERSION
+echo
 echo "   Defconfig:       $DEFCONFIG"
 echo
 echo "   Local build dir: $LOCAL_BUILD_DIR"
+echo
 echo "   Target dir:      $TARGET_DIR"
+echo
 echo "   Tools dir:       $TOOLS_DIR"
 echo
 echo "   Cross compiler:  $CROSS_COMPILE"
+echo
 echo "   Host compiler:   $HOST_CC"
 echo
 echo "   Target system partition: $SYSTEM_PARTITION"
+echo
+echo "   Target boot partition: $BOOT_PARTITION"
 echo
 
 if [ -e $CERT -a -e $KEY ]
@@ -106,7 +112,7 @@ cp $TOOLS_DIR/aroma-update-binary $UPDATE_ROOT/META-INF/com/google/android/updat
 $BANNER
 EOF
   sed -e "s|@@SYSTEM_PARTITION@@|$SYSTEM_PARTITION|" \
-      -e "s|@@FLASH_BOOT@@|$FLASH_BOOT|" \
+      -e "s|@@BOOT_PARTITION@@|$BOOT_PARTITION|" \
       -e "s|@@FIX_PERMISSIONS@@|$permissions |" \
       < $TOOLS_DIR/aroma-updater-script
 ) > $UPDATE_ROOT/META-INF/com/google/android/updater-script
