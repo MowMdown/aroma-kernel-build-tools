@@ -40,6 +40,18 @@ case $val in
 esac
 ##end Get cpu minclock from aroma tmp
 
+##Get CPU SYS_LOCKED from aroma tmp
+val=$(cat /tmp/aroma-data/locked.prop | cut -d"=" -f2)
+case $val in
+  1)
+    locked="1"
+    ;;
+  2)
+    locked="0"
+    ;;
+esac
+##end Get cpu sys_locked from aroma tmp
+
 #clean cmdline from foreigns. failsafe
 #needed since some cmdlines are full of rubbish :)
 sed -i 's/user_debug=31[^$]*$/user_debug=31/g' /tmp/boot.img-cmdline
@@ -73,3 +85,18 @@ case $cmdline in
 	;;
 esac
 #end minkhz
+
+#Add sys_locked to the kernels cmdline.
+cmdline=$(cat /tmp/boot.img-cmdline)
+searchString="locked="
+locked="locked="$locked
+case $cmdline in
+  "$searchString"* | *" $searchString"*)
+   	echo $(cat /tmp/boot.img-cmdline | sed -e 's/locked=[^ ]\+//')>/tmp/boot.img-cmdline
+	echo $(cat /tmp/boot.img-cmdline)\ $locked>/tmp/boot.img-cmdline
+	;;  
+  *)
+	echo $(cat /tmp/boot.img-cmdline)\ $locked>/tmp/boot.img-cmdline
+	;;
+esac
+#end locked

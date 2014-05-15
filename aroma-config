@@ -139,7 +139,6 @@ else
             "378 mhz",        "Min Clock set to 378 mhz",       0,      #-- selected = 3
 	    "384 mhz",        "Min Clock set to 384 mhz",       1,      #-- selected = 4
 	    "486 mhz",        "Min Clock set to 486 mhz",       0       #-- selected = 5
-
   );
 endif;
 
@@ -158,8 +157,6 @@ else
 	  "Sweep2Wake",        "",             2,      #-- Group 1. key = "selected"
 	    "On",         "Recommended",       0,      #-- selected = 1
 	    "Off",        "Default",           1       #-- selected = 2
-	    
-
   );
 endif;
 
@@ -178,8 +175,6 @@ else
 	  "Sweep2Sleep Only",     "",          2,      #-- Group 1. key = "selected"
 	    "On",         "Recommended",       0,      #-- selected = 1
 	    "Off",        "Default",           1       #-- selected = 2
-	    
-
   );
 endif;
 
@@ -198,8 +193,6 @@ else
 	  "DoubleTap2Wake",        "",         2,      #-- Group 1. key = "selected"
 	    "On",         "Recommended",       0,      #-- selected = 1
 	    "Off",        "Default",           1       #-- selected = 2
-	    
-
   );
 endif;
 
@@ -217,9 +210,19 @@ else
 
 	  "Pocket Detect",        "",          2,  #-- Group 1. key = "selected"
 	    "On",         "Recommended",       0,      #-- selected = 1
-	    "Off",        "Default",           1       #-- selected = 2
-	    
+	    "Off",        "Default",           1       #-- selected = 2	    
+  );
+endif;
 
+if (prop("type.prop","selected")=="1") then
+  writetmpfile(
+	  "locked.prop",
+	  "selected=2\n"
+  );
+else
+  writetmpfile(
+	  "locked.prop",
+	  "selected=1\n"
   );
 endif;
 
