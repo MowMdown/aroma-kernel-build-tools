@@ -65,6 +65,8 @@ and any other scripts that you want aroma to use
 
 Other
 =====
+An example of a kerneltools-build-config for the DNA is included, edit the file to match your set-up and move it to the top level directory.
+
 If you wish to use any additional files, you can create a system directory inside the LOCAL_BUILD_DIR 
 and store anything you wish to send to the system after mounting. 
 

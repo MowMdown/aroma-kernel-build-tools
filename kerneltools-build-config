@@ -1,0 +1,18 @@
+CROSS_COMPILE=/home/torrented/android/toolchains/arm-cortex-a15-linaro-4.8.3/bin/arm-cortex_a15-linux-gnueabihf-
+HOST_CC=gcc
+LOCAL_BUILD_DIR=dna
+TARGET_DIR=/home/torrented/android/kernel/out
+SYSTEM_PARTITION="/dev/block/mmcblk0p32"
+BOOT_PARTITION="/dev/block/mmcblk0p19"
+DEFCONFIG=dlx_defconfig
+N_CORES=4
+
+VERSION=6.6-torrented
+
+BANNER=`cat <<EOF
+ui_print("**********************************************");
+ui_print("");
+ui_print(" VERSION: $VERSION ");
+ui_print("");
+ui_print("**********************************************");
+EOF`

@@ -70,7 +70,7 @@ textbox(
 
 textbox(
   "Changelog",
-  "Beastmode Changelog",
+  "Changelog",
   "icons/info",
  resread("changelog.txt")
 );
