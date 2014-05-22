@@ -10,37 +10,24 @@ CROSS_COMPILE=~/path/to/toolchain/linaro-4.x.x/bin/arm-eabi-
 
 HOST_CC=gcc
 
-LOCAL_BUILD_DIR=directory_containing_source
+LOCAL_BUILD_DIR=is a directory that you keep in the top level of the source
 
 TARGET_DIR=~/path/to/output/dir
 
-SYSTEM_PARTITION="/dev/block/mmcblk0pXX"
+SYSTEM_PARTITION="/dev/block/mmcblk0p##"
 
-BOOT_PARTITION="/dev/block/mmcblk0pXX"
+BOOT_PARTITION="/dev/block/mmcblk0p##"
 
 DEFCONFIG=device_defconfig
 
 FLASH_BOOT='write_raw_image("/tmp/boot.img", "boot")' <-- Optional
 
-N_CORES=4
+N_CORES= # of jobs, this replaces "make -j4" command
 
 VERSION=**YOUR_KERNEL_VERSION_HERE**
 
 The file is named "kerneltools-build-config"
 
-To use the "config-builder.py" Script
-
-Change dir to the build tools and run: 
-
-"chmod a+x config-builder.py"
-
-"./config-builder.py"
-
-
-In the LOCAL_BUILD_DIR you must have the following files:
-
-initrd.img
-bootimg.cfg
 
 Using Aroma-kernel-build-tools
 ==============================
@@ -62,6 +49,7 @@ abootimg
 mkbootimg
 unpackbootimg
 and any other scripts that you want aroma to use
+
 
 Other
 =====
